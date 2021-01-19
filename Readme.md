@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
-* Студент: [Эльдар Мендигужаев](https://up.htmlacademy.ru/htmlcss/30/user/1688633).
-* Наставник: `Неизвестно`.
+- Студент: [Эльдар Мендигужаев](https://up.htmlacademy.ru/htmlcss/30/user/1688633).
+- Наставник: [Максим Петрищак](https://htmlacademy.ru/profile/maksim_petrishchak).
 
 ---
 
