@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Магазин готовых шаблонов</title>
 </head>
 
 <body>
@@ -31,30 +30,25 @@
   <!--section "Фильтра" start-->
   <section>
     <h2>Фильтр товаров</h2>
-    <div class="slider">
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="filter-item">
-          <legend>СТОИМОСТЬ:</legend>
-          <div class="range-controls">
-            <label for="range-controls">
-              <input type="range" min="1" max="20000" value="15000" id="range-controls">
-            </label><br>
-          </div>
-
-          <div class="price-controls">
-            <label class="min-price">
-              от <input type="number" name="min-price" placeholder="0">
-            </label>
-            <label class="max-price">
-              до <input type="number" name="max-price" placeholder="15000">
-            </label>
-          </div>
-        </fieldset>
-      </form>
-    </div>
     <form action="https://echo.htmlacademy.ru" method="get">
-      <fieldset>
-        <legend>СЕТКА:</legend>
+      <fieldset class="filter-item">
+        <legend>СТОИМОСТЬ:</legend>
+        <div class="range-controls">
+          <label for="range-controls">
+            <input type="range" min="1" max="20000" value="15000" id="range-controls">
+          </label><br>
+        </div>
+
+        <div class="price-controls">
+          <label class="min-price">
+            от <input type="number" name="min-price" placeholder="0">
+          </label>
+          <label class="max-price">
+            до <input type="number" name="max-price" placeholder="15000">
+          </label>
+        </div>
+
+        <p><b>СЕТКА:</b></p>
         <ul>
           <li>
             <input type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
@@ -69,9 +63,8 @@
             <label for="filter-rubber">Резиновая</label>
           </li>
         </ul>
-      </fieldset>
-      <fieldset>
-        <legend>ОСОБЕННОСТИ:</legend>
+
+        <p><b>ОСОБЕННОСТИ:</b></p>
         <ul>
           <li>
             <input type="checkbox" name="slider" id="filter-slider" checked>
@@ -108,18 +101,17 @@
         <legend>СОРТИРОВАТЬ:</legend>
         <ul>
           <li>
-            <input type="button" id="filter-price" value="ПО ЦЕНЕ">
-            <!--Кроме как функии onclick ничего не приходит (чтобы сделать не кликабельной)-->
+            <button type="submit">ПО ЦЕНЕ</button>
           </li>
           <li>
-            <input type="button" id="filter-type" value="ПО ТИПУ">
+            <button type="submit">ПО ТИПУ</button>
           </li>
           <li>
-            <input type="button" id="filter-name" value="ПО НАЗВАНИЮ">
+            <button type="submit">ПО НАЗВАНИЮ</button>
           </li>
         </ul>
-        <button type="button">Вверх</button>
-        <button type="button">Вниз</button>
+        <button type="submit">Вверх</button>
+        <button type="submit">Вниз</button>
       </fieldset>
     </form>
     <ul>
@@ -130,49 +122,64 @@
             <img src="/" alt="Шаблон сайта для туристов «SEDONA»">
           </p>
         </a>
-        <form action="https://echo.htmlacademy.ru" method="get">
-          <label for="buy">9 900 ₽ <button type="submit" id="buy">Купить</button></label>
-        </form>
+        <!--Снизу всплывашка с ценой и ссылкой на покупку-->
+        <p class="price">9 900 ₽</p>
+        <a href="#">Купить</a>
       </li>
       <li>
         <a href="product.html">
-          <h3>Cайт «PINK»</h3>
+          <h3>Продуктовый лендинг приложения для IOS и Android «PINK APP»</h3>
           <p>
-            <img src="/" alt="Шаблон сайта продаж «PINK»">
+            <img src="/" alt="Шаблон сайта продаж приложения для IOS и Android «PINK APP»">
           </p>
         </a>
+        <!--Снизу всплывашка с ценой и ссылкой на покупку-->
+        <p class="price">9 900 ₽</p>
+        <a href="#">Купить</a>
       </li>
       <li>
         <a href="product.html">
-          <h3>Cайт Барбершоп «Бородинский»</h3>
+          <h3>Cайт салона красоты Барбершоп «Бородинский»</h3>
           <p>
-            <img src="/" alt="Шаблон сайта Барбершоп «BORODINSKI»">
+            <img src="/" alt="Шаблон сайта салона красоты Барбершоп «BORODINSKI»">
           </p>
         </a>
+        <!--Снизу всплывашка с ценой и ссылкой на покупку-->
+        <p class="price">9 900 ₽</p>
+        <a href="#">Купить</a>
       </li>
       <li>
         <a href="product.html">
-          <h3>Cайт «MISHKA»</h3>
+          <h3>Интернет-магазин вязанных игрушек «MISHKA»</h3>
           <p>
-            <img src="/" alt="Шаблон сайта вязанных изделий «MISHKA»">
+            <img src="/" alt="Шаблон интернет-магазина вязанных игрушек «MISHKA»">
           </p>
         </a>
+        <!--Снизу всплывашка с ценой и ссылкой на покупку-->
+        <p class="price">9 900 ₽</p>
+        <a href="#">Купить</a>
       </li>
       <li>
         <a href="product.html">
-          <h3>Cайт «Traning A+»</h3>
+          <h3>Лендинг курсов повышения квалификации «A PLUS»</h3>
           <p>
-            <img src="/" alt="Шаблон сайта по обучению «Traning A+»">
+            <img src="/" alt="Шаблон сайта курсов повышения квалификации «A PLUS»">
           </p>
         </a>
+        <!--Снизу всплывашка с ценой и ссылкой на покупку-->
+        <p class="price">9 900 ₽</p>
+        <a href="#">Купить</a>
       </li>
       <li>
         <a href="product.html">
-          <h3>Cайт «КВАСТ»</h3>
+          <h3>Промо-сайт производителя крафтового кваса «КВАСТ»</h3>
           <p>
-            <img src="/" alt="Шаблон сайта по продаже кваса «КВАСТ»">
+            <img src="/" alt="Шаблон промо-сайта по продаже крафтового кваса «КВАСТ»">
           </p>
         </a>
+        <!--Снизу всплывашка с ценой и ссылкой на покупку-->
+        <p class="price">9 900 ₽</p>
+        <a href="#">Купить</a>
       </li>
     </ul>
     <ul>
