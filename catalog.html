@@ -27,7 +27,7 @@
   </header>
   <!--Шапка end-->
 
-  <!--section "Фильтра" start-->
+  <!--section "Фильтр товаров" start-->
   <section>
     <h2>Фильтр товаров</h2>
     <form action="https://echo.htmlacademy.ru" method="get">
@@ -48,7 +48,7 @@
           </label>
         </div>
 
-        <p><b>СЕТКА:</b></p>
+        <p>СЕТКА:</p>
         <ul>
           <li>
             <input type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
@@ -64,7 +64,7 @@
           </li>
         </ul>
 
-        <p><b>ОСОБЕННОСТИ:</b></p>
+        <p>ОСОБЕННОСТИ:</p>
         <ul>
           <li>
             <input type="checkbox" name="slider" id="filter-slider" checked>
@@ -91,29 +91,25 @@
       <button type="submit">Показать</button>
     </form>
   </section>
-  <!--section "Фильтра" end-->
+  <!--section "Фильтр товаров" end-->
 
   <!--section Каталога start-->
   <section>
     <h2>Каталог Веб-сайтов</h2>
-    <form action="https://echo.htmlacademy.ru" method="get">
-      <fieldset>
-        <legend>СОРТИРОВАТЬ:</legend>
-        <ul>
-          <li>
-            <button type="submit">ПО ЦЕНЕ</button>
-          </li>
-          <li>
-            <button type="submit">ПО ТИПУ</button>
-          </li>
-          <li>
-            <button type="submit">ПО НАЗВАНИЮ</button>
-          </li>
-        </ul>
-        <button type="submit">Вверх</button>
-        <button type="submit">Вниз</button>
-      </fieldset>
-    </form>
+    <div class="sorting">
+      <p class="sorting-title">СОРТИРОВАТЬ:</p>
+      <ul class="sorting-list">
+        <li><a href="#" class="sorting-text">ПО ЦЕНЕ</a></li>
+        <li><a href="#" class="sorting-text">ПО ТИПУ</a></li>
+        <li><a href="#" class="sorting-text">ПО НАЗВАНИЮ</a></li>
+      </ul>
+
+      <div class="sorting-controls">
+        <button></button>
+        <button></button>
+      </div>
+    </div>
+
     <ul>
       <li>
         <a href="product.html">
@@ -204,7 +200,7 @@
     <section class="road_map">
       <img src="/" width="1440" height="416" alt="Карта с указанием адреса">
       <div>
-        <h3>NЁRDS DESIGN STUDIO</h3>
+        <p>NЁRDS DESIGN STUDIO</p>
         <p>191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8<br>
           тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
@@ -230,6 +226,25 @@
     </section>
   </footer>
   <!--Конец-->
+
+  <!--Попап-->
+  <section class="road_map_popup">
+    <h2>Напишите нам</h2>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label for="name-id"><b>Ваше имя:</b></label><br>
+      <input type="text" name="name" id="name-id" placeholder="Имя Фамилия"><br>
+
+      <label for="email-id"><b>Ваш email:</b></label><br>
+      <input type="email" name="email" id="email-id" placeholder="email@example.com"><br>
+
+      <label for="text-field"><b>Текст письма:</b></label><br>
+      <textarea name="text" id="text-field" placeholder="В свободной форме" rows="5" cols="60"></textarea><br>
+      <!--Через CSS отменю возможность растягивать поле-->
+
+      <button type="submit">Отправить</button>
+    </form>
+    <button type="button">Закрыть</button>
+  </section>
 
 </body>
 
