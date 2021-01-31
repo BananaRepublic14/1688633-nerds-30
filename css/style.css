@@ -1,0 +1,641 @@
+/* Fonts */
+
+@font-face {
+	font-family: "Roboto";
+  src: url("../fonts/roboto.woff2") format("woff2"), 
+       url("../fonts/roboto.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto";
+  src: url("../fonts/robotomedium.woff2") format("woff2"), 
+       url("../fonts/robotomedium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto";
+  src: url("../fonts/robotobold.woff2") format("woff2"), 
+       url("../fonts/robotobold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* Variables */
+
+:root {
+  --basic-dark: #000000;
+  --basic-extra-dark-1: #444444; 
+  --basic-extra-dark-2: #666666; 
+  --basic-white: #FFFFFF;
+  --basic-gray: #EEEEEE;
+  --basic-extra-gray-1: #D7DCDE;;   
+  --basic-extra-gray-2: #E1E1E1;
+  --basic-red: #FB565A;
+  --basic-extra-red-1: #E74246;
+  --basic-extra-red-2: #D7373B;  
+  --basic-green: #00CA74;
+  --basic-extra-green-1: #00BC6C;
+  --basic-extra-green-2: #00AA62;  
+  --basic-gold: #EFC84A;
+  --basic-extra-gold-1: #EAB534;
+  --basic-extra-gold-2: #E5A722;   
+}
+
+/* Global */
+
+.page-body {
+  max-width: 1440px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-dark);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  width: 1158px;
+  height: 2px;
+  left: 140px;
+  background: var(--basic-gray);
+  margin: 0 142px 0 140px;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Раздел "Main navigation" */
+
+.main-navigation {
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase; 
+  background-color: var(--basic-gray);
+}
+
+.main-header-logo {
+  margin-top: 48px;
+  margin-left: 140px;
+}
+
+.main-navigation-list {
+  list-style: none;
+  margin-top: 75px;
+  margin-right: 245px;
+  margin-left: 203px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-navigation-link {
+  color: var(--basic-dark);
+  padding: 45px;
+}
+
+.user-navigation {
+  list-style: none;
+  font-style: italic;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-navigation-link {
+  color: var(--basic-dark);
+}
+
+.main-header-logo:hover,
+.main-navigation-list a:hover,
+.user-navigation a:hover {
+  color: var(--basic-red);
+}
+
+.main-navigation-list a:focus,
+.user-navigation a:focus {
+  border-bottom: 2px solid var(--basic-red);
+  outline: none; 
+  padding: 0 0 12px 0;
+}
+
+.main-header-logo:active,
+.main-navigation-list a:active,
+.user-navigation a:active {
+  color: var(--basic-dark);
+  opacity: 0.3;
+  border: none;
+}
+
+.main-header-logo:visited,
+.main-navigation-list a:visited,
+.user-navigation a:visited {
+  border-bottom: 2px solid var(--basic-red);
+  outline: none; 
+  padding: 0 0 12px 0;
+}
+
+/* Раздел "Intro" */
+
+.container-slider {
+  background-color: var(--basic-gray);
+}
+
+.sliders-list {
+  /* display: inline-flex;
+  justify-content: center;
+  align-items: center; */
+  list-style: none;
+}
+
+.sliders-img-1, .sliders-img-2, .sliders-img-3 {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-gray);
+}
+
+.title-slider-1, .title-slider-2, .title-slider-3 {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.link-button-more {
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  padding: 16px 54px 16px 54px;
+  background-color: var(--basic-red);
+  border-radius: 3px;
+}
+
+.link-button-more:hover {
+  background-color: var(--basic-extra-red-1);
+}
+
+.link-button-more:active {
+  background-color: var(--basic-extra-red-2);
+  color: rgba(255,255, 255, 0.3); 
+  /* Иначе я не смог создать прозрачность тексту "Узнать больше", пришлось прибегнуть к старому проверенному способу =) */
+}
+
+/* Раздел "Advantages" */
+
+.advantages {
+  margin: 80px 200px 80px 140px;
+}
+
+.advantages-list {
+  padding: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.advantages-item {
+  padding-right: 100px;
+}
+
+.advantages-item:last-child {
+  padding: 0;
+}
+
+.advantages-img {
+  background-color: var(--basic-gray);
+  border: 1px solid var(--basic-white);
+  /* В макете background у картинок разный-задал какой понравился */
+}
+
+.advantages-title {
+  margin-top: 25px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px; 
+  text-transform: uppercase;
+}
+
+.advantages-text {
+  max-width: 260px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.order-button-1 {
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  border-radius: 3px;
+  padding: 17px 40px 15px 39px;
+}
+
+.order-button-1:hover {
+  background-color: var(--basic-extra-red-1);
+}
+
+.order-button-1:active {
+  background-color: var(--basic-extra-red-2);
+  color: rgba(255,255, 255, 0.3); 
+}
+
+.order-button-2 {
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-green);
+  border-radius: 3px;
+  padding: 17px 40px 15px 39px;
+}
+
+.order-button-2:hover {
+  background-color: var(--basic-extra-green-1);
+}
+
+.order-button-2:active {
+  background-color: var(--basic-extra-green-2);
+  color: rgba(255,255, 255, 0.3); 
+}
+
+.order-button-3 {
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  padding: 17px 40px 15px 39px;
+  background-color: var(--basic-gold);
+  border-radius: 3px;
+}
+
+.order-button-3:hover {
+  background-color: var(--basic-extra-gold-1);
+}
+
+.order-button-3:active {
+  background-color: var(--basic-extra-gold-2);
+  color: rgba(255,255, 255, 0.3); 
+}
+
+/* Раздел "Information" */
+
+.information {
+  margin: 39px 126px 73px 140px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 413px;
+}
+
+.information-content-1 {
+  margin: 73px 149px 0 0;
+}
+
+.information-title {
+  max-width: 651px;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  margin: 0;
+}
+
+.information-text-1 {
+  margin: 32px 0 0 0;
+  max-width: 646px;
+}
+
+.information-text-2 {
+  margin: 40px 0 0 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.information-list {
+  width: 431px;
+  height: 167px;
+  padding: 0;
+  margin: 0;
+}
+
+.information-list li {
+  list-style: none;
+  margin-left: 32px;
+  padding-top: 23px;
+}
+
+.information-content-2 {
+  width: 374px;
+  height: 412px;
+}
+
+.information-img {
+  background-color: var(--basic-gray);
+  border: 1px solid var(--basic-white);
+}
+
+.information-stat {
+  width: 374px;
+  height: 167px;
+  margin-top: 37px;
+}
+
+.information-text {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+.information-item-1 {
+  text-align: left;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 64px;
+}
+
+.information-item-1 span {
+  height: 40px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 40px;
+  position: absolute;  
+}
+
+.information-item-2 {
+  line-height: 18px;
+}
+
+/* Раздел "Partners" */
+
+.partners {
+  margin: 46px 183px 44px 140px;
+}
+
+.partners-list {
+  width: 1085px;
+  height: 90px;
+  list-style: none;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.html-partner img:hover {
+  background: url(../img/logo/htmlacademy-logo-2.png);
+}
+
+.borodinski-partner img:hover {
+  background: url(../img/logo/borodinski-logo-2.png);
+}
+
+.pink-partner img:hover {
+  background: url(../img/logo/pink-logo-2.png);
+}
+
+.mishka-partner img:hover {
+  background: url(../img/logo/mishka-logo-2.png);
+}
+
+/* footer */
+
+.main-footer {
+  margin: 80px 0 0 0;
+}
+
+.footer-map {
+  width: 1440px;
+  height: 416px;
+  background: url(/img/map.jpg);
+}
+
+.footer-map-marker {
+  width: 1440px;
+  height: 416px;
+  background: url(/img/map-marker.png) no-repeat 825px 85px;
+}
+
+.footer-contacts {
+  width: 319px;
+  height: 308px;
+  background-color: var(--basic-white);
+  text-align: center;
+}
+
+.footer-text-1 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding-top: 49px ;  
+}
+
+.footer-text-2, .footer-phone {
+  padding-top: 33px;
+  line-height: 18px;
+  color: var(--basic-extra-dark-2);
+}
+
+.footer-text-3 {
+  padding-top: 37px;
+}
+
+.footer-button {
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  padding: 17px 44px 15px 44px;
+  background-color: var(--basic-red);
+  border-radius: 3px;
+  border: none;
+}
+
+.footer-button:hover {
+  background-color: var(--basic-extra-red-1);
+}
+
+.footer-button:active {
+  background-color: var(--basic-extra-red-2);
+  color: rgba(255,255, 255, 0.3); 
+}
+
+.footer-contacts > .footer-text-1 {
+  background: white; 
+  text-align: center;
+}
+
+.footer-contacts > .footer-text-2 {
+  background: white; 
+  text-align: center;
+}
+
+.footer-contacts > .footer-text-3 {
+  text-align: center;
+}
+
+.footer-social-information {
+  width: 1061px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social {
+  margin: 68px 0 0 140px;
+}
+
+.footer-social-link {
+  width: 261px;
+  padding: 0;
+  margin-right: 139px;
+  list-style: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-button-1 {
+  height: 81px;
+  padding: 33px 27px 33px 27px;
+  background-color: var(--basic-gray);
+  border-radius: 50%;
+  margin-right: 9px;
+}
+
+.social-button-2 {
+  padding: 31px 24px 28px 35px;
+  background-color: var(--basic-gray);
+  border-radius: 50%;
+  margin-right: 9px;
+}
+
+.social-button-3 {
+  padding: 30px;
+  background-color: var(--basic-gray);
+  border-radius: 50%;
+}
+
+/* НЕ ПОЛУЧАЕТСЯ у меня вырезать значки круглыми и одинаковыми (УБИЛ 2 часа на них) -я правда старался =( */
+
+.social-button-1:hover, .social-button-2:hover, .social-button-3:hover,
+.social-button-1:focus, .social-button-2:focus, .social-button-3:focus {
+  background-color: var(--basic-extra-red-1);
+}
+
+.social-button-1:active, .social-button-2:active, .social-button-3:active {
+  background-color: var(--basic-extra-red-2);
+}
+
+.social-button-1:active svg, .social-button-2:active svg, .social-button-3:active svg {
+  opacity: 0.3;
+}
+
+.social-text-1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.social-text-2 {
+  line-height: 22px;
+  color: var(--basic-extra-dark);
+}
+
+/* Popup */
+
+.popup {
+  width: 960px;
+  height: 590px;
+  border: 2px solid;
+}
+
+.popup-description {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+}
+
+.name-id {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.icon-user-name {
+  width: 360px;
+  height: 50px;
+  border: 2px solid var(--basic-extra-gray-1);
+}
+
+.email-id {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.icon-user-email {
+  width: 360px;
+  height: 50px;
+  border: 2px solid var(--basic-extra-gray-1);
+}
+
+.text-field {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.icon-user-text {
+  width: 760px;
+  height: 118px;
+  border: 2px solid var(--basic-extra-gray-1);
+}
+
+.button-popup-send {
+  width: 259px;
+  height: 50px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  border-radius: 3px;
+  border: none;
+}
+
+.button-popup-send:hover,
+.button-popup-send:focus {
+  background-color: var(--basic-extra-red-1);
+}
+
+.button-popup-send:active {
+  background-color: var(--basic-extra-red-2);
+}
+
+.button-popup-close {
+  border: none;
+  background-color: var(--basic-white);
+}
+
+/* Я не знаю как заменить эффекты кнопке "Закрыть" */
