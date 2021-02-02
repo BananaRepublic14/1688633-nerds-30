@@ -5,7 +5,8 @@
   src: url("../fonts/roboto.woff2") format("woff2"), 
        url("../fonts/roboto.woff") format("woff");
 	font-weight: 400;
-	font-style: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -13,7 +14,8 @@
   src: url("../fonts/robotomedium.woff2") format("woff2"), 
        url("../fonts/robotomedium.woff") format("woff");
 	font-weight: 500;
-	font-style: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -21,19 +23,27 @@
   src: url("../fonts/robotobold.woff2") format("woff2"), 
        url("../fonts/robotobold.woff") format("woff");
 	font-weight: 700;
-	font-style: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Variables */
+
+*, *::before, *::after { box-sizing: border-box; }
 
 :root {
   --basic-dark: #000000;
   --basic-extra-dark-1: #444444; 
   --basic-extra-dark-2: #666666; 
+  --basic-extra-dark-3: #283136;
   --basic-white: #FFFFFF;
   --basic-gray: #EEEEEE;
   --basic-extra-gray-1: #D7DCDE;;   
   --basic-extra-gray-2: #E1E1E1;
+  --basic-extra-gray-3: #DFDFDF;
+  --basic-extra-gray-4: #D5D5D5;
+  --basic-extra-gray-5: #4D4D4D;
+  --basic-extra-gray-6: #DBDBDB;
   --basic-red: #FB565A;
   --basic-extra-red-1: #E74246;
   --basic-extra-red-2: #D7373B;  
@@ -48,7 +58,7 @@
 /* Global */
 
 .page-body {
-  max-width: 1440px;
+  min-width: 1160px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -56,7 +66,8 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: var(--basic-dark);
+  color: var(--basic-black);
+  background-color: var(--basic-white);
 }
 
 a {
@@ -68,14 +79,6 @@ img {
   height: auto;
 }
 
-hr {
-  width: 1158px;
-  height: 2px;
-  left: 140px;
-  background: var(--basic-gray);
-  margin: 0 142px 0 140px;
-}
-
 .visibility-hidden {
   visibility: hidden;
   position: absolute;
@@ -85,45 +88,54 @@ hr {
   margin: -1px;
 }
 
+/* Button */
+
+.button {
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  border-radius: 3px;
+  border: none;
+}
+
+/* text-uppercase */
+
+.text-uppercase {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-dark);
+  text-transform: uppercase;
+}
+
 /* Раздел "Main navigation" */
 
 .main-navigation {
   line-height: 30px;
   font-weight: 500;
   text-transform: uppercase; 
+  color: var(--basic-dark);
   background-color: var(--basic-gray);
-}
-
-.main-header-logo {
-  margin-top: 48px;
-  margin-left: 140px;
 }
 
 .main-navigation-list {
   list-style: none;
-  margin-top: 75px;
-  margin-right: 245px;
-  margin-left: 203px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .main-navigation-link {
-  color: var(--basic-dark);
-  padding: 45px;
+  color: inherit;
 }
 
 .user-navigation {
   list-style: none;
   font-style: italic;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .user-navigation-link {
-  color: var(--basic-dark);
+  color: inherit;
 }
 
 .main-header-logo:hover,
@@ -132,6 +144,7 @@ hr {
   color: var(--basic-red);
 }
 
+.main-header-logo:focus,
 .main-navigation-list a:focus,
 .user-navigation a:focus {
   border-bottom: 2px solid var(--basic-red);
@@ -158,78 +171,46 @@ hr {
 /* Раздел "Intro" */
 
 .container-slider {
+  color: inherit;
   background-color: var(--basic-gray);
 }
 
-.sliders-list {
-  /* display: inline-flex;
-  justify-content: center;
-  align-items: center; */
+.slider-list {
   list-style: none;
 }
 
-.sliders-img-1, .sliders-img-2, .sliders-img-3 {
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-gray);
-}
-
-.title-slider-1, .title-slider-2, .title-slider-3 {
+.slider-title {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
 }
 
-.link-button-more {
-  font-weight: 500;
-  line-height: 18px;
-  text-align: center;
-  color: var(--basic-white);
-  text-transform: uppercase;
-  padding: 16px 54px 16px 54px;
-  background-color: var(--basic-red);
-  border-radius: 3px;
+.slider-text {
+  font: inherit;
+  color: var(--basic-extra-dark-3);
 }
 
-.link-button-more:hover {
+.slider-link {
+  padding: 16px 54px 16px 54px;
+  background-color: var(--basic-red);
+}
+
+.slider-link:hover {
   background-color: var(--basic-extra-red-1);
 }
 
-.link-button-more:active {
+.slider-link:active {
   background-color: var(--basic-extra-red-2);
   color: rgba(255,255, 255, 0.3); 
-  /* Иначе я не смог создать прозрачность тексту "Узнать больше", пришлось прибегнуть к старому проверенному способу =) */
 }
 
 /* Раздел "Advantages" */
 
-.advantages {
-  margin: 80px 200px 80px 140px;
-}
-
 .advantages-list {
-  padding: 0;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
   list-style: none;
 }
 
-.advantages-item {
-  padding-right: 100px;
-}
-
-.advantages-item:last-child {
-  padding: 0;
-}
-
-.advantages-img {
-  background-color: var(--basic-gray);
-  border: 1px solid var(--basic-white);
-  /* В макете background у картинок разный-задал какой понравился */
-}
-
 .advantages-title {
-  margin-top: 25px;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px; 
@@ -237,238 +218,157 @@ hr {
 }
 
 .advantages-text {
+  font: inherit;
+  color: var(--basic-extra-dark-3);
   max-width: 260px;
-  margin-top: 16px;
-  margin-bottom: 32px;
 }
 
-.order-button-1 {
-  font-weight: 500;
-  line-height: 18px;
-  color: var(--basic-white);
-  text-transform: uppercase;
+.advantages-button-red {
   background-color: var(--basic-red);
-  border-radius: 3px;
   padding: 17px 40px 15px 39px;
 }
 
-.order-button-1:hover {
+.advantages-button-red:hover { 
   background-color: var(--basic-extra-red-1);
 }
 
-.order-button-1:active {
+.advantages-button-red:active {
   background-color: var(--basic-extra-red-2);
-  color: rgba(255,255, 255, 0.3); 
+  color: rgba(255,255, 255, 0.3);
 }
 
-.order-button-2 {
-  font-weight: 500;
-  line-height: 18px;
-  color: var(--basic-white);
-  text-transform: uppercase;
+.advantages-button-green {
   background-color: var(--basic-green);
-  border-radius: 3px;
   padding: 17px 40px 15px 39px;
 }
 
-.order-button-2:hover {
+.advantages-button-green:hover {
   background-color: var(--basic-extra-green-1);
 }
 
-.order-button-2:active {
+.advantages-button-green:active {
   background-color: var(--basic-extra-green-2);
   color: rgba(255,255, 255, 0.3); 
 }
 
-.order-button-3 {
-  font-weight: 500;
-  line-height: 18px;
-  color: var(--basic-white);
-  text-transform: uppercase;
+.advantages-button-yellow {
   padding: 17px 40px 15px 39px;
   background-color: var(--basic-gold);
-  border-radius: 3px;
 }
 
-.order-button-3:hover {
+.advantages-button-yellow:hover {
   background-color: var(--basic-extra-gold-1);
 }
 
-.order-button-3:active {
+.advantages-button-yellow:active {
   background-color: var(--basic-extra-gold-2);
   color: rgba(255,255, 255, 0.3); 
 }
 
 /* Раздел "Information" */
 
-.information {
-  margin: 39px 126px 73px 140px;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 413px;
-}
-
-.information-content-1 {
-  margin: 73px 149px 0 0;
+.information-column-left {
+  color: var(--basic-extra-dark-3);
 }
 
 .information-title {
-  max-width: 651px;
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
-  margin: 0;
+  color: var(--basic-dark);
 }
 
-.information-text-1 {
-  margin: 32px 0 0 0;
-  max-width: 646px;
+.information-text {
+  font: inherit;
 }
 
-.information-text-2 {
-  margin: 40px 0 0 0;
+.information-list-title {
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .information-list {
-  width: 431px;
-  height: 167px;
-  padding: 0;
-  margin: 0;
-}
-
-.information-list li {
+  font: inherit;
   list-style: none;
-  margin-left: 32px;
-  padding-top: 23px;
 }
 
-.information-content-2 {
-  width: 374px;
-  height: 412px;
-}
-
-.information-img {
-  background-color: var(--basic-gray);
-  border: 1px solid var(--basic-white);
-}
-
-.information-stat {
-  width: 374px;
-  height: 167px;
-  margin-top: 37px;
-}
-
-.information-text {
-  text-transform: uppercase;
+.information-table-title {
+  font: inherit;
   font-weight: 700;
-  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
 }
 
-.information-item-1 {
-  text-align: left;
+.information-table-lead {
   font-weight: 700;
   font-size: 45px;
   line-height: 64px;
 }
 
-.information-item-1 span {
-  height: 40px;
+.information-table-inner-text {
   font-weight: 700;
   font-size: 26px;
   line-height: 40px;
-  position: absolute;  
 }
 
-.information-item-2 {
+.information-table-text {
+  color: var(--basic-extra-dark-3);
+  font-size: 16px;
   line-height: 18px;
 }
 
-/* Раздел "Partners" */
+/* Раздел "Partner" */
 
-.partners {
-  margin: 46px 183px 44px 140px;
-}
-
-.partners-list {
-  width: 1085px;
-  height: 90px;
+.partner-list {
   list-style: none;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.html-partner img:hover {
-  background: url(../img/logo/htmlacademy-logo-2.png);
+.partner-link {
+  opacity: 0.3;
 }
 
-.borodinski-partner img:hover {
-  background: url(../img/logo/borodinski-logo-2.png);
+.partner-link:hover {
+  opacity: 1;
 }
 
-.pink-partner img:hover {
-  background: url(../img/logo/pink-logo-2.png);
-}
-
-.mishka-partner img:hover {
-  background: url(../img/logo/mishka-logo-2.png);
+.partner-link:active {
+  opacity: 0.3;
 }
 
 /* footer */
-
-.main-footer {
-  margin: 80px 0 0 0;
-}
 
 .footer-map {
   width: 1440px;
   height: 416px;
   background: url(/img/map.jpg);
+  background-color: var(--basic-gray);
 }
 
+/* В итоге я не понял, как двигать маркер по карте =(*/
 .footer-map-marker {
-  width: 1440px;
-  height: 416px;
-  background: url(/img/map-marker.png) no-repeat 825px 85px;
 }
 
-.footer-contacts {
-  width: 319px;
-  height: 308px;
+.footer-contact {
+  color: var(--basic-dark);
   background-color: var(--basic-white);
   text-align: center;
 }
 
-.footer-text-1 {
+.footer-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  padding-top: 49px ;  
 }
 
-.footer-text-2, .footer-phone {
-  padding-top: 33px;
+.footer-text, .footer-phone {
   line-height: 18px;
   color: var(--basic-extra-dark-2);
 }
 
-.footer-text-3 {
-  padding-top: 37px;
-}
-
 .footer-button {
-  font-weight: 500;
-  line-height: 18px;
-  color: var(--basic-white);
-  text-transform: uppercase;
   padding: 17px 44px 15px 44px;
   background-color: var(--basic-red);
-  border-radius: 3px;
-  border: none;
 }
 
 .footer-button:hover {
@@ -480,86 +380,32 @@ hr {
   color: rgba(255,255, 255, 0.3); 
 }
 
-.footer-contacts > .footer-text-1 {
-  background: white; 
-  text-align: center;
-}
-
-.footer-contacts > .footer-text-2 {
-  background: white; 
-  text-align: center;
-}
-
-.footer-contacts > .footer-text-3 {
-  text-align: center;
-}
-
-.footer-social-information {
-  width: 1061px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-social {
-  margin: 68px 0 0 140px;
-}
-
 .footer-social-link {
-  width: 261px;
-  padding: 0;
-  margin-right: 139px;
   list-style: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-button-1 {
-  height: 81px;
-  padding: 33px 27px 33px 27px;
   background-color: var(--basic-gray);
-  border-radius: 50%;
-  margin-right: 9px;
 }
 
-.social-button-2 {
-  padding: 31px 24px 28px 35px;
-  background-color: var(--basic-gray);
-  border-radius: 50%;
-  margin-right: 9px;
-}
-
-.social-button-3 {
-  padding: 30px;
-  background-color: var(--basic-gray);
-  border-radius: 50%;
-}
-
-/* НЕ ПОЛУЧАЕТСЯ у меня вырезать значки круглыми и одинаковыми (УБИЛ 2 часа на них) -я правда старался =( */
-
-.social-button-1:hover, .social-button-2:hover, .social-button-3:hover,
-.social-button-1:focus, .social-button-2:focus, .social-button-3:focus {
+.social-button:hover, .social-button:focus {
   background-color: var(--basic-extra-red-1);
 }
 
-.social-button-1:active, .social-button-2:active, .social-button-3:active {
+.social-button:active {
   background-color: var(--basic-extra-red-2);
 }
 
-.social-button-1:active svg, .social-button-2:active svg, .social-button-3:active svg {
+.social-button-img:active {
   opacity: 0.3;
 }
 
-.social-text-1 {
+.social-text-lead {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
 }
 
-.social-text-2 {
+.social-text {
   line-height: 22px;
-  color: var(--basic-extra-dark);
+  color: var(--basic-extra-dark-1);
 }
 
 /* Popup */
@@ -567,7 +413,7 @@ hr {
 .popup {
   width: 960px;
   height: 590px;
-  border: 2px solid;
+  border: 2px solid var(--basic-extra-gray-1);
 }
 
 .popup-description {
@@ -576,52 +422,28 @@ hr {
   line-height: 53px;
 }
 
-.name-id {
+.popup-form-label {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
 }
 
-.icon-user-name {
+.popup-form-field {
   width: 360px;
   height: 50px;
   border: 2px solid var(--basic-extra-gray-1);
 }
 
-.email-id {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-}
-
-.icon-user-email {
-  width: 360px;
-  height: 50px;
-  border: 2px solid var(--basic-extra-gray-1);
-}
-
-.text-field {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-}
-
-.icon-user-text {
+.popup-form-textarea {
   width: 760px;
   height: 118px;
   border: 2px solid var(--basic-extra-gray-1);
 }
 
 .button-popup-send {
-  width: 259px;
-  height: 50px;
-  font-weight: 500;
-  line-height: 18px;
-  text-transform: uppercase;
+  padding: 17px 83px 18px 83px;
   color: var(--basic-white);
   background-color: var(--basic-red);
-  border-radius: 3px;
-  border: none;
 }
 
 .button-popup-send:hover,
@@ -636,6 +458,176 @@ hr {
 .button-popup-close {
   border: none;
   background-color: var(--basic-white);
+  /* Я не знаю как заменить эффекты кнопке "Закрыть" */
 }
 
-/* Я не знаю как заменить эффекты кнопке "Закрыть" */
+
+/* Магазин готовых шаблонов - catalog.html */
+
+.main-title {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-dark);
+  background-color: var(--basic-gray);
+}
+
+.form-fieldset {
+  border: none;
+  color: var(--basic-extra-dark-3);
+}
+
+.box-range-controls {
+  width: 260px;
+  height: 80px;
+  background-color: var(--basic-gray);
+  border-radius: 3px;
+  text-align: center;
+}
+
+.min-price, .max-price {
+  line-height: 22px;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.price-input {
+  width: 80px;
+  height: 38px;
+  background-color: var(--basic-gray);
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.form-field-list {
+  list-style: none;
+  line-height: 19px;
+  color: inherit;
+}
+
+.form-submit-button {
+  padding: 17px 89px 15px 88px;
+  color: var(--basic-dark);
+}
+
+.form-submit-button:hover {
+  background-color: var(--basic-extra-gray-3);
+}
+
+.form-submit-button:active {
+  background-color: var(--basic-extra-gray-4);
+  color: rgba(0, 0, 0, 0.3); 
+}
+
+.sorting-list {
+  list-style: none;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sorting-text {
+  color: var(--basic-dark);
+  opacity: 0.3;
+}
+
+.sorting-text:hover {
+  opacity: 0.6;
+}
+
+.sorting-text:active, .sorting-text:focus {
+  opacity: 1;
+}
+
+.products-list {
+  list-style: none;
+}
+
+.product-line-img {
+  opacity: 0.1;
+}
+
+.product-line-img:hover, .product-line-img:active, .product-line-img:focus  {
+  opacity: 1;
+}
+
+.product-content {
+  width: 360px;
+  height: 231px;
+  color: var(--basic-dark);
+  background-color: var(--basic-gray);
+  text-align: center;
+}
+
+.product-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.product-title:hover {
+  color: var(--basic-red);
+}
+
+.product-title:active {
+  color: rgba(0, 0, 0, 0.3); 
+}
+
+.product-text {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-extra-dark-2);
+}
+
+.product-button {
+  padding: 17px 72px 15px 72px;
+  background-color: var(--basic-red);
+}
+
+.product-button:hover {
+  background-color: var(--basic-extra-red-1);
+}
+
+.product-button:active {
+  background-color: var(--basic-extra-red-2);
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item {
+  padding: 15px; 
+  /* Временно поставил, чтобы видеть кнопки */
+}
+
+.pagination-item-current {
+  padding: 17px 20px 15px 20px;
+  color: var(--basic-dark);
+  background-color: var(--basic-gray);
+} 
+
+.pagination-item-current:hover, .pagination-item-current:focus {
+  background-color: var(--basic-extra-gray-3);
+}
+
+.pagination-item-current:active {
+  background-color: var(--basic-extra-gray-4);
+  color: rgba(0, 0, 0, 0.3); 
+}
+
+.pagination-item-next {
+  padding: 17px 77px 15px 78px;
+  color: var(--basic-dark);
+  background-color: var(--basic-gray);
+}
+
+.pagination-item-next:hover {
+  background-color: var(--basic-extra-gray-3);
+}
+
+.pagination-item-next:active {
+  background-color: var(--basic-extra-gray-4);
+  color: rgba(0, 0, 0, 0.3); 
+}
