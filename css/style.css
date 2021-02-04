@@ -29,8 +29,6 @@
 
 /* Variables */
 
-*, *::before, *::after { box-sizing: border-box; }
-
 :root {
   --basic-dark: #000000;
   --basic-extra-dark-1: #444444; 
@@ -57,6 +55,13 @@
 
 /* Global */
 
+.page {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *::before, *::after { box-sizing: inherit; }
+
 .page-body {
   min-width: 1160px;
   margin: 0;
@@ -68,15 +73,19 @@
   font-weight: 400;
   color: var(--basic-black);
   background-color: var(--basic-white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: center; 
 }
 
 .visibility-hidden {
@@ -111,18 +120,40 @@ img {
   text-transform: uppercase;
 }
 
+/* margin-bottom   */
+.margin-bottom {
+  margin-bottom: 80px;
+}
+
 /* Раздел "Main navigation" */
+
+.background-box {
+  background-color: var(--basic-gray);
+}
+
+.main-navigation-wrapper {
+  background-color: var(--basic-gray);
+  width: 1160px;
+  margin: 0 auto;
+}
 
 .main-navigation {
   line-height: 30px;
   font-weight: 500;
   text-transform: uppercase; 
-  color: var(--basic-dark);
-  background-color: var(--basic-gray);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 49px;
+}
+
+.main-header-logo {
+  margin: 0;
+  width: 160px;
 }
 
 .main-navigation-list {
   list-style: none;
+  justify-self: center;
 }
 
 .main-navigation-link {
@@ -132,6 +163,9 @@ img {
 .user-navigation {
   list-style: none;
   font-style: italic;
+  margin: 0;
+  min-width: 115px;
+  justify-self: end;
 }
 
 .user-navigation-link {
@@ -172,11 +206,19 @@ img {
 
 .container-slider {
   color: inherit;
-  background-color: var(--basic-gray);
+  width: 1160px;
+  margin: 0 auto;
 }
 
-.slider-list {
-  list-style: none;
+.index-slider {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+}
+
+.slider-switch {
+  outline: 5px solid rgb(6, 241, 171);
+  outline-offset: -5px;
+  justify-self: center;
 }
 
 .slider-title {
@@ -206,8 +248,19 @@ img {
 
 /* Раздел "Advantages" */
 
+.advantages-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .advantages-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 1100px;
+  min-height: 347px;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-title {
@@ -267,6 +320,14 @@ img {
 
 /* Раздел "Information" */
 
+.information-container {
+  width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 651px 374px;
+  column-gap: 149px;
+}
+
 .information-column-left {
   color: var(--basic-extra-dark-3);
 }
@@ -276,6 +337,7 @@ img {
   font-size: 45px;
   line-height: 45px;
   color: var(--basic-dark);
+  margin: 0;
 }
 
 .information-text {
@@ -319,8 +381,18 @@ img {
 
 /* Раздел "Partner" */
 
+.partner-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .partner-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .partner-link {
@@ -337,6 +409,13 @@ img {
 
 /* footer */
 
+.footer-map-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
+}
+
 .footer-map {
   width: 1440px;
   height: 416px;
@@ -344,15 +423,12 @@ img {
   background-color: var(--basic-gray);
 }
 
-/* В итоге я не понял, как двигать маркер по карте =(*/
-.footer-map-marker {
-}
-
-.footer-contact {
+/* ВРЕМЕННО ЗАКОММЕНТИЛ ДЛЯ СЕТКИ */
+/* .footer-contact {
   color: var(--basic-dark);
   background-color: var(--basic-white);
   text-align: center;
-}
+} */
 
 .footer-title {
   font-weight: 700;
@@ -380,21 +456,34 @@ img {
   color: rgba(255,255, 255, 0.3); 
 }
 
-.footer-social-link {
+/* social section */
+
+.footer-container-social {
+  width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 261px 1fr;
+}
+
+.footer-social-list {
   list-style: none;
   background-color: var(--basic-gray);
 }
 
-.social-button:hover, .social-button:focus {
+.social-link:hover, .social-link:focus {
   background-color: var(--basic-extra-red-1);
 }
 
-.social-button:active {
+.social-link:active {
   background-color: var(--basic-extra-red-2);
 }
 
-.social-button-img:active {
+.social-link-img:active {
   opacity: 0.3;
+}
+
+.social-text-block {
+  justify-self: center;
 }
 
 .social-text-lead {
@@ -440,18 +529,18 @@ img {
   border: 2px solid var(--basic-extra-gray-1);
 }
 
-.button-popup-send {
+.popup-button-send {
   padding: 17px 83px 18px 83px;
   color: var(--basic-white);
   background-color: var(--basic-red);
 }
 
-.button-popup-send:hover,
-.button-popup-send:focus {
+.popup-button-send:hover,
+.popup-button-send:focus {
   background-color: var(--basic-extra-red-1);
 }
 
-.button-popup-send:active {
+.popup-button-send:active {
   background-color: var(--basic-extra-red-2);
 }
 
@@ -472,14 +561,14 @@ img {
   background-color: var(--basic-gray);
 }
 
-.form-fieldset {
+.form-legend {
+  padding: 0;
   border: none;
   color: var(--basic-extra-dark-3);
 }
 
 .box-range-controls {
-  width: 260px;
-  height: 80px;
+  padding: 36px 0;
   background-color: var(--basic-gray);
   border-radius: 3px;
   text-align: center;
@@ -602,32 +691,32 @@ img {
   /* Временно поставил, чтобы видеть кнопки */
 }
 
-.pagination-item-current {
+.pagination-link {
   padding: 17px 20px 15px 20px;
   color: var(--basic-dark);
   background-color: var(--basic-gray);
 } 
 
-.pagination-item-current:hover, .pagination-item-current:focus {
+.pagination-link:hover, .pagination-link:focus {
   background-color: var(--basic-extra-gray-3);
 }
 
-.pagination-item-current:active {
+.pagination-link:active {
   background-color: var(--basic-extra-gray-4);
   color: rgba(0, 0, 0, 0.3); 
 }
 
-.pagination-item-next {
+.pagination-link-next {
   padding: 17px 77px 15px 78px;
   color: var(--basic-dark);
   background-color: var(--basic-gray);
 }
 
-.pagination-item-next:hover {
+.pagination-link-next:hover {
   background-color: var(--basic-extra-gray-3);
 }
 
-.pagination-item-next:active {
+.pagination-link-next:active {
   background-color: var(--basic-extra-gray-4);
   color: rgba(0, 0, 0, 0.3); 
 }
