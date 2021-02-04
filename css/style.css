@@ -553,12 +553,32 @@ img {
 
 /* Магазин готовых шаблонов - catalog.html */
 
+/* h1 */
 .main-title {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
-  color: var(--basic-dark);
-  background-color: var(--basic-gray);
+  text-align: center;
+  margin-bottom: 55px;
+  padding: 0;
+}
+
+.main-catalog {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.container-page {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  column-gap: 141px;
+}
+
+/* Раздел "Фильтр товаров" */
+
+.form-section {
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
 }
 
 .form-legend {
@@ -609,6 +629,33 @@ img {
   color: rgba(0, 0, 0, 0.3); 
 }
 
+/* Раздел "Каталог" */
+
+.container-catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.sorting-container {
+  grid-column: 1 / -1;
+  outline: 5px solid rgba(131, 196, 28, 0.7);
+  outline-offset: -5px;
+}
+
+.product-container {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  outline: 5px solid rgba(46, 22, 180, 0.7);
+  outline-offset: -5px;
+}
+
+.pagination-container {
+  grid-column: 3 / -3;
+  outline: 5px solid rgba(238, 87, 0, 0.7);
+  outline-offset: -5px;
+}
+
 .sorting-list {
   list-style: none;
   font-size: 14px;
@@ -629,12 +676,16 @@ img {
   opacity: 1;
 }
 
-.products-list {
+.product-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .product-line-img {
   opacity: 0.1;
+  margin: 0;
+  padding: 0;
 }
 
 .product-line-img:hover, .product-line-img:active, .product-line-img:focus  {
