@@ -588,6 +588,16 @@ img {
   column-gap: 141px;
 }
 
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sorting-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 /* Раздел "Фильтр товаров" */
 
 .form-section {
