@@ -120,17 +120,21 @@ img {
   text-transform: uppercase;
 }
 
-/* Раздел "Main navigation" */
-
-.main-header {
-  background-color: var(--basic-gray);
-  margin-bottom: 55px;
-}
-
 .center {
   width: 1160px;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+.wrapper {
+  background-color: var(--basic-gray);
+}
+
+/* Раздел "Main navigation" */
+
+.main-header {
+  background-color: var(--basic-gray);
+  padding-bottom: 72px;
 }
 
 .main-navigation {
@@ -211,6 +215,8 @@ img {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
+  margin: 0;
+  padding: 0;
 }
 
 .slider-switch {
@@ -426,6 +432,7 @@ img {
   height: 416px;
   background: url(/img/map.jpg);
   background-color: var(--basic-gray);
+  margin-bottom: 68px;
 }
 
 /* ВРЕМЕННО ЗАКОММЕНТИЛ ДЛЯ СЕТКИ */
@@ -463,14 +470,16 @@ img {
 
 /* social section */
 
-.footer-container-social {
+.footer-container {
   display: grid;
   grid-template-columns: 261px 1fr;
+  margin-bottom: 68px;
 }
 
 .footer-social-list {
   list-style: none;
   background-color: var(--basic-gray);
+  margin: 0;
 }
 
 .social-link:hover, .social-link:focus {
@@ -493,6 +502,7 @@ img {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
+  margin: 0;
 }
 
 .social-text {
@@ -556,14 +566,20 @@ img {
 
 /* Магазин готовых шаблонов - catalog.html */
 
+.main-catalog {
+  margin-bottom: 60px;
+}
+
 /* h1 */
 .main-title {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
   text-align: center;
+  margin: 0;
   margin-bottom: 55px;
   padding: 0;
+  padding-bottom: 108px;
 }
 
 .container-page {
