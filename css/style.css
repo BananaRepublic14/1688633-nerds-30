@@ -120,21 +120,17 @@ img {
   text-transform: uppercase;
 }
 
-/* margin-bottom   */
-.margin-bottom {
-  margin-bottom: 80px;
-}
-
 /* Раздел "Main navigation" */
 
-.background-box {
+.main-header {
   background-color: var(--basic-gray);
+  margin-bottom: 55px;
 }
 
-.main-navigation-wrapper {
-  background-color: var(--basic-gray);
+.center {
   width: 1160px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .main-navigation {
@@ -142,8 +138,9 @@ img {
   font-weight: 500;
   text-transform: uppercase; 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   padding-top: 49px;
+  gap: 10px;
 }
 
 .main-header-logo {
@@ -206,19 +203,20 @@ img {
 
 .container-slider {
   color: inherit;
-  width: 1160px;
-  margin: 0 auto;
+  margin-bottom: 80px;
+  background-color: var(--basic-gray);
 }
 
-.index-slider {
+.slider-item {
+  list-style: none;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
 }
 
 .slider-switch {
-  outline: 5px solid rgb(6, 241, 171);
+  outline: 5px solid rgb(189, 201, 21);
   outline-offset: -5px;
-  justify-self: center;
+  justify-self: end;
 }
 
 .slider-title {
@@ -248,9 +246,8 @@ img {
 
 /* Раздел "Advantages" */
 
-.advantages-container {
-  width: 1160px;
-  margin: 0 auto;
+.advantages {
+  margin-bottom: 80px;
 }
 
 .advantages-list {
@@ -320,9 +317,14 @@ img {
 
 /* Раздел "Information" */
 
+.information {
+  border-top: 2px solid var(--basic-gray);
+  border-bottom: 2px solid var(--basic-gray);
+  padding: 73px 0;
+  margin-bottom: 46px;
+}
+
 .information-container {
-  width: 1160px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 651px 374px;
   column-gap: 149px;
@@ -381,15 +383,18 @@ img {
 
 /* Раздел "Partner" */
 
-.partner-container {
-  width: 1160px;
-  margin: 0 auto;
+.partner {
+  border-bottom: 2px solid var(--basic-gray);
+  padding: 0;
+  padding-bottom: 44px;
+  margin-bottom: 78px;
 }
 
 .partner-list {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -459,8 +464,6 @@ img {
 /* social section */
 
 .footer-container-social {
-  width: 1160px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 261px 1fr;
 }
@@ -563,11 +566,6 @@ img {
   padding: 0;
 }
 
-.main-catalog {
-  width: 1160px;
-  margin: 0 auto;
-}
-
 .container-page {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -581,7 +579,7 @@ img {
   outline-offset: -5px;
 }
 
-.form-legend {
+.form-fieldset {
   padding: 0;
   border: none;
   color: var(--basic-extra-dark-3);
@@ -631,7 +629,7 @@ img {
 
 /* Раздел "Каталог" */
 
-.container-catalog {
+.catalog-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content 1fr min-content;
