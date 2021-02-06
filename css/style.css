@@ -118,6 +118,8 @@ img {
   line-height: 30px;
   color: var(--basic-dark);
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 .center {
@@ -134,7 +136,6 @@ img {
 
 .main-header {
   background-color: var(--basic-gray);
-  padding-bottom: 72px;
 }
 
 .main-navigation {
@@ -211,18 +212,40 @@ img {
   background-color: var(--basic-gray);
 }
 
-.slider-item {
+.slider-list {
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr min-content 1fr;
   margin: 0;
   padding: 0;
 }
 
+.slider-item {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  display: none;
+}
+
+.slider-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.slide-1 {
+  background-color: inherit;
+  display: block;
+}
+
+/* .slide-2 {
+  background-color: #bc6400;
+}
+
+.slide-3 {
+  background-color: #bc005e;
+} */
+
 .slider-switch {
-  outline: 5px solid rgb(189, 201, 21);
+  text-align: center;
+  outline: 5px solid rgb(21, 201, 96);
   outline-offset: -5px;
-  justify-self: end;
 }
 
 .slider-title {
@@ -260,7 +283,6 @@ img {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 1100px;
   min-height: 347px;
   margin: 0;
   padding: 0;
@@ -420,27 +442,22 @@ img {
 
 /* footer */
 
-.footer-map-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-map {
-  width: 1440px;
-  height: 416px;
+.footer-information {
+  min-height: 416px;
   background: url(/img/map.jpg);
+  background-size: cover;
   background-color: var(--basic-gray);
   margin-bottom: 68px;
 }
 
 /* ВРЕМЕННО ЗАКОММЕНТИЛ ДЛЯ СЕТКИ */
-/* .footer-contact {
+.footer-contact {
+  width: 319px;
   color: var(--basic-dark);
   background-color: var(--basic-white);
   text-align: center;
-} */
+  padding: 39px;  /* временный */
+}
 
 .footer-title {
   font-weight: 700;
@@ -588,12 +605,12 @@ img {
   column-gap: 141px;
 }
 
-.product-list {
+.sorting-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.sorting-container {
+.product-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -660,6 +677,8 @@ img {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 .sorting-text {
