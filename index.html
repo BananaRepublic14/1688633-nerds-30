@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Дизайн студия «Нёрдс»</title>
+  <title>Интернет магазин «Нёрдс»</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
@@ -16,13 +16,15 @@
 
   <!-- Раздел "Main navigation" -->
   <header class="main-header">
-    <h1 class="visibility-hidden">Дизайн студия «Нёрдс»</h1>
+    <h1 class="visibility-hidden">Интернет магазин «Нёрдс»</h1>
 
     <div class="center">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="#">
-          <img src="img/logo/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс»">
-        </a>
+        <div class="main-header-logo">
+          <a href="#">
+            <img src="img/logo/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс»">
+          </a>
+        </div>
 
         <ul class="main-navigation-list">
           <li><a class="main-navigation-link" href="#">Студия</a></li>
@@ -42,32 +44,30 @@
     </div>
   </header>
 
-  <!-- Раздел "Intro" -->
+  <!-- Раздел "Presentation" -->
   <main class="main-index">
     <section class="container-slider">
+      <h2 class="visibility-hidden">Презентация</h2>
       <!--Первый слайд-->
-
+      <!-- "Экспериментальный слайд" -->
       <ul class="slider-list">
         <li class="slider-item slide-1">
           <div class="center">
             <div class="slider-inner">
-              <div>
-                <h2 class="slider-title">Долго, дорого, скрупулезно.</h2>
-                <p class="slider-text">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения</p>
-                <a class="button slider-link" href="#">Узнать больше</a>
-              </div>
-              <div>
-                <img src="img/nerds-index-slide-1.png" width="760" height="431" alt="Первый слайд">
-              </div>
+              <p class="slider-title">Долго, дорого, скрупулезно. </p>
+              <p class="slider-text">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+              <a class="button slider-link" href="#">Узнать больше</a>
+              <img class="slider-img" src="img/nerds-index-slide-1.png" width="760" height="431" alt="Первый слайд">
             </div>
           </div>
         </li>
 
         <!-- Второй слайд-->
+        <!-- По старой схеме -->
         <li class="slider-item slide-2">
           <div class="center">
             <div class="slider-inner">
-              <h2 class="slider-title">Любим математику<br>как никто другой</h2>
+              <p class="slider-title">Любим математику<br>как никто другой</p>
               <p class="slider-text">Никакого креатива, только математические формулы<br>для расчета идеальных пропорций</p>
               <a class="button slider-link" href="#">Узнать больше</a>
             </div>
@@ -78,12 +78,17 @@
         </li>
 
         <!--Третий слайд-->
+        <!-- По старой схеме -->
         <li class="slider-item slide-3">
           <div class="center">
-            <h2 class="slider-title">Только ночь<br>только хардкор</h2>
-            <p class="slider-text">Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается.</p>
-            <a class="button slider-link" href="#">Узнать больше</a>
-            <img class="slider-img" src="img/nerds-index-slide-3.png" width="760" height="431" alt="Третий слайд">
+            <div class="slider-inner">
+              <p class="slider-title">Только ночь<br>только хардкор</p>
+              <p class="slider-text">Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается.</p>
+              <a class="button slider-link" href="#">Узнать больше</a>
+            </div>
+            <div>
+              <img class="slider-img" src="img/nerds-index-slide-3.png" width="760" height="431" alt="Третий слайд">
+            </div>
           </div>
         </li>
       </ul>
@@ -95,29 +100,29 @@
       </div>
     </section>
 
-    <!--Раздел "Advantages"-->
-    <section class="advantages">
-      <h2 class="visibility-hidden">Преимущества</h2>
+    <!--Раздел "Services"-->
+    <section class="services">
+      <h2 class="visibility-hidden">Услуги</h2>
 
       <div class="center">
-        <ul class="advantages-list">
-          <li class="advantages-item">
-            <img class="advantages-img" src="img/illustration-1.jpg" width="300" height="146" alt="Иллюстрация картинки «Веб-сайты»">
-            <h3 class="advantages-title">Веб-сайты</h3>
-            <p class="advantages-text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-            <a class="button advantages-button-red" href="catalog.html">Заказать</a>
+        <ul class="services-list">
+          <li class="services-item">
+            <img class="services-img" src="img/illustration-1.jpg" width="300" height="146" alt="Иллюстрация картинки «Веб-сайты»">
+            <h3 class="services-title">Веб-сайты</h3>
+            <p class="services-text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+            <a class="button services-button-red" href="catalog.html">Заказать</a>
           </li>
-          <li class="advantages-item main">
-            <img class="advantages-img" src="img/illustration-2.jpg" width="300" height="146" alt="Иллюстрация картинки «Приложения»">
-            <h3 class="advantages-title">Приложения</h3>
-            <p class="advantages-text">Покорите топ-10 приложений<br>в AppStore и Google Play</p>
-            <a class="button advantages-button-green" href="catalog.html">Заказать</a>
+          <li class="services-item main">
+            <img class="services-img" src="img/illustration-2.jpg" width="300" height="146" alt="Иллюстрация картинки «Приложения»">
+            <h3 class="services-title">Приложения</h3>
+            <p class="services-text">Покорите топ-10 приложений<br>в AppStore и Google Play</p>
+            <a class="button services-button-green" href="catalog.html">Заказать</a>
           </li>
-          <li class="advantages-item">
-            <img class="advantages-img" src="img/illustration-3.jpg" width="300" height="146" alt="Иллюстрация картинки «Презентации»">
-            <h3 class="advantages-title">Презентации</h3>
-            <p class="advantages-text">Вы даже не подозреваете, насколько вы изумительны!</p>
-            <a class="button advantages-button-yellow" href="catalog.html">Заказать</a>
+          <li class="services-item">
+            <img class="services-img" src="img/illustration-3.jpg" width="300" height="146" alt="Иллюстрация картинки «Презентации»">
+            <h3 class="services-title">Презентации</h3>
+            <p class="services-text">Вы даже не подозреваете, насколько вы изумительны!</p>
+            <a class="button services-button-yellow" href="catalog.html">Заказать</a>
           </li>
         </ul>
       </div>
@@ -125,14 +130,16 @@
 
     <!--Раздел "Information"-->
     <section class="information">
+      <h2 class="visibility-hidden">Информация о компании</h2>
+
       <div class="center">
         <div class="information-container">
           <div class="information-column-left">
-            <h2 class="information-title">Мы - маленькая, но гордая<br>дизайн-студия из Краснодара.</h2>
+            <p class="information-title">Мы - маленькая, но гордая<br>дизайн-студия из Краснодара.</p>
             <p class="information-text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
               превыше креатива. Работаем не покладая рук, как роботы.</p>
             <p class="information-list-title">Выполняем заказы на разработку:</p>
-            <ul class="information-list">
+            <ul class="information-text">
               <li>Веб-сайтов любой сложности</li>
               <li>Мобильных приложений для IOS и Android</li>
               <li>Слайдшоу и видео для корпоративных презентаций</li>
@@ -251,35 +258,49 @@
 
   <!--Popup-->
   <section class="popup">
-    <h2 class="popup-description">Напишите нам</h2>
 
-    <form class="popup-form" action="https://echo.htmlacademy.ru" method="post">
-      <label class="popup-form-label" for="name-id">Ваше имя:</label><br>
-      <input class="popup-form-field" type="text" name="name" id="name-id" placeholder="Имя Фамилия"><br>
+    <div class="popup-container">
+      <h2 class="popup-description">Напишите нам</h2>
 
-      <label class="popup-form-label" for="email-id">Ваш email:</label><br>
-      <input class="popup-form-field" type="email" name="email" id="email-id" placeholder="email@example.com"><br>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="popup-form-item">
+          <div class="popup-info-item">
+            <div>
+              <label class="popup-form-label" for="name-id">Ваше имя:</label><br>
+              <input class="popup-form-field" type="text" name="name" id="name-id" placeholder="Имя Фамилия">
+            </div>
+            <div>
+              <label class="popup-form-label" for="email-id">Ваш email:</label><br>
+              <input class="popup-form-field" type="email" name="email" id="email-id" placeholder="email@example.com">
+            </div>
+          </div>
+        </div>
 
-      <label class="popup-form-label" for="text-field">Текст письма:</label><br>
-      <textarea class="popup-form-textarea" name="text" id="text-field" placeholder="В свободной форме" rows="5" cols="60"></textarea><br>
+        <div class="popup-textarea-item">
+          <label class="popup-form-label" for="text-field">Текст письма:</label><br>
+          <textarea class="popup-form-textarea" name="text" id="text-field" placeholder="В свободной форме" rows="5"
+            cols="60"></textarea><br>
+          <button class="button popup-button-send" type="submit">Отправить</button>
+        </div>
 
-      <button class="button popup-button-send" type="submit">Отправить</button>
-    </form>
-    <button class="button-popup-close" type="button">
-      <span class="visibility-hidden">Закрыть</span>
-      <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0)">
-          <path
-            d="M13.3 10.5l7.4-7.4c.4-.4.4-1 0-1.4L19.3.3a1 1 0 00-1.4 0l-7.4 7.4L3.1.3a1 1 0 00-1.4 0L.3 1.7a1 1 0 000 1.4l7.4 7.4L.3 18a1 1 0 000 1.4l1.4 1.4c.4.4 1 .4 1.4 0l7.4-7.4 7.4 7.4c.4.4 1 .4 1.4 0l1.4-1.4c.4-.4.4-1 0-1.4l-7.4-7.4z"
-            fill="#FB565A" fill-opacity=".3" />
-        </g>
-        <defs>
-          <clipPath id="clip0">
-            <path fill="#fff" d="M0 0h21v21H0z" />
-          </clipPath>
-        </defs>
-      </svg>
-    </button>
+      </form>
+
+      <!-- <button class="button-popup-close" type="button">
+        <span class="visibility-hidden">Закрыть</span>
+        <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+            <path
+              d="M13.3 10.5l7.4-7.4c.4-.4.4-1 0-1.4L19.3.3a1 1 0 00-1.4 0l-7.4 7.4L3.1.3a1 1 0 00-1.4 0L.3 1.7a1 1 0 000 1.4l7.4 7.4L.3 18a1 1 0 000 1.4l1.4 1.4c.4.4 1 .4 1.4 0l7.4-7.4 7.4 7.4c.4.4 1 .4 1.4 0l1.4-1.4c.4-.4.4-1 0-1.4l-7.4-7.4z"
+              fill="#FB565A" fill-opacity=".3" />
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <path fill="#fff" d="M0 0h21v21H0z" />
+            </clipPath>
+          </defs>
+        </svg>
+      </button> -->
+    </div>
   </section>
 </body>
 
