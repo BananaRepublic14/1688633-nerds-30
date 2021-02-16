@@ -23,17 +23,14 @@
         </a>
 
         <ul class="main-navigation-list">
-          <li><a class="main-navigation-link" href="#">Студия</a></li>
-          <li><a class="main-navigation-link" href="#">Клиенты</a></li>
-          <li><a class="main-navigation-link" href="catalog.html">Магазин</a></li>
-          <li><a class="main-navigation-link" href="#">Контакты</a></li>
+          <li class="main-navigation-link"><a href="#">Студия</a></li>
+          <li class="main-navigation-link"><a href="#">Клиенты</a></li>
+          <li class="main-navigation-link"><a href="catalog.html">Магазин</a></li>
+          <li class="main-navigation-link"><a href="#">Контакты</a></li>
         </ul>
-        <ul class="user-navigation">
-          <li><a class="user-navigation-link" href="#"><svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4l-.4-2H0v2h2l2 9h11V9H9.4L15 7V2z"
-                  fill="#A6A6A6" />
-              </svg>Корзина</a></li>
+
+        <ul class="user-navigation-list">
+          <li class="user-navigation-link"><a class="basket" href="#">Корзина</a></li>
         </ul>
       </nav>
     </div>
@@ -50,16 +47,26 @@
 
         <!--Раздел "Фильтр товаров"-->
         <section class="form-section">
-          <h2 class="visibility-hidden">Фильтр товаров</h2>
+          <h2 class="visually-hidden">Фильтр товаров</h2>
 
           <form class="form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="form-fieldset">
               <legend class="text-uppercase">Стоимость:</legend>
-
-              <div class="box-range-controls">
-                <label for="range-controls">
-                  <input type="range" min="1" max="20000" step="999" value="15000" id="range-controls">
-                </label><br>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="
+                        width: 30%;
+                        margin-left: 20%
+                      "></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0" style="
+                      left: 20%
+                    "></div>
+                  <div class="toggle toggle-max" tabindex="0" style="
+                      left: 50%
+                    "></div>
+                </div>
               </div>
 
               <div class="price-controls">
@@ -76,15 +83,15 @@
               <legend class="text-uppercase">Сетка:</legend>
               <ul class="form-field-list">
                 <li class="form-field-item">
-                  <input type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
+                  <input class="filter-input-radio visually-hidden" type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
                   <label for="filter-adaptive">Адаптивная</label>
                 </li>
                 <li class="form-field-item">
-                  <input type="radio" name="grid" value="fixed" id="filter-fixed">
+                  <input class="filter-input-radio visually-hidden" type="radio" name="grid" value="fixed" id="filter-fixed">
                   <label for="filter-fixed">Фиксированная</label>
                 </li>
                 <li class="form-field-item">
-                  <input type="radio" name="grid" value="rubber" id="filter-rubber">
+                  <input class=" filter-input-radio visually-hidden" type="radio" name="grid" value="rubber" id="filter-rubber">
                   <label for="filter-rubber">Резиновая</label>
                 </li>
               </ul>
@@ -94,23 +101,23 @@
               <legend class="text-uppercase">Особенности:</legend>
               <ul class="form-field-list">
                 <li class="form-field-item">
-                  <input type="checkbox" name="slider" id="filter-slider" checked>
+                  <input class="filter-input-checkedbox visually-hidden" type="checkbox" name="slider" id="filter-slider" checked>
                   <label for="filter-slider">Слайдер</label>
                 </li>
                 <li class="form-field-item">
-                  <input type="checkbox" name="advantages" id="filter-advantages">
+                  <input class="filter-input-checkedbox visually-hidden" type="checkbox" name="advantages" id="filter-advantages">
                   <label for="filter-advantages">Блок преимуществ</label>
                 </li>
                 <li class="form-field-item">
-                  <input type="checkbox" name="news" id="filter-news" checked>
+                  <input class="filter-input-checkedbox  visually-hidden" type="checkbox" name="news" id="filter-news" checked>
                   <label for="filter-news">Новости</label>
                 </li>
                 <li class="form-field-item">
-                  <input type="checkbox" name="gallery" id="filter-gallery">
+                  <input class="filter-input-checkedbox visually-hidden" type="checkbox" name="gallery" id="filter-gallery">
                   <label for="filter-gallery">Галерея</label>
                 </li>
                 <li class="form-field-item">
-                  <input type="checkbox" name="basket" id="filter-basket">
+                  <input class="filter-input-checkedbox visually-hidden" type="checkbox" name="basket" id="filter-basket">
                   <label for="filter-basket">Корзина</label>
                 </li>
               </ul>
@@ -121,7 +128,7 @@
 
         <!--Раздел "Каталог"-->
         <section class="catalog">
-          <h2 class="visibility-hidden">Каталог Веб-сайтов</h2>
+          <h2 class="visually-hidden">Каталог Веб-сайтов</h2>
 
           <div class="sorting-container">
             <p class="text-uppercase">Сортировать:</p>
@@ -133,8 +140,8 @@
             </ul>
 
             <div class="sorting-controls">
-              <button></button>
-              <button></button>
+              <button class="button-down"><span class="visually-hidden">Вниз</span></button>
+              <button class="button-up checked"><span class="visually-hidden">Вверх</span></button>
             </div>
 
           </div>
@@ -143,89 +150,88 @@
           <ul class="product-list">
             <li class="product-item">
               <a class="product-line" href="product.html">
-                <img class="product-line-img" src="img/browser.png" width="360" height="40" alt="">
-                <img src="img/catalog-img/sedona.jpg" width="358" height="578" alt="Шаблон сайта для туристов «SEDONA»">
+                <img class="browser-img" src="img/browser.png" width="360" height="40" alt="">
+                <img src="img/catalog-img/sedona.jpg" width="360" height="580" alt="Шаблон сайта для туристов «SEDONA»">
               </a>
               <!--Окно с ссылкой на покупку товара-->
-              <!-- <div class="product-content">
+              <div class="product-content">
                 <h3 class="product-title">Sedona</h3>
                 <p class="product-text">Информационный сайт<br>для туристов</p>
                 <a class="button product-button" href="#">9 900 ₽</a>
-              </div> -->
+              </div>
             </li>
-
             <li class="product-item">
               <a class="product-line" href="product.html">
-                <img class="product-line-img" src="img/browser.png" width="360" height="40" alt="">
-                <img src="img/catalog-img/pink.jpg" width="358" height="578"
+                <img class="browser-img" src="img/browser.png" width="360" height="40" alt="">
+                <img src="img/catalog-img/pink.jpg" width="360" height="580"
                   alt="Шаблон сайта продаж приложения для IOS и Android «PINK APP»">
               </a>
               <!--Окно с ссылкой на покупку товара-->
-              <!-- <div class="product-content">
-                  <h3 class="product-title">Pink app</h3>
-                  <p class="product-text">Продуктовый лендинг<br>приложения для IOS и Android</p>
-                  <a class="button product-button" href="#">9 900 ₽</a>
-                </div> -->
+              <div class="product-content">
+                <h3 class="product-title">Pink app</h3>
+                <p class="product-text">Продуктовый лендинг<br>приложения для IOS и Android</p>
+                <a class="button product-button" href="#">9 900 ₽</a>
+              </div>
             </li>
 
             <li class="product-item">
               <a class="product-line" href="product.html">
-                <img class="product-line-img" src="img/browser.png" width="360" height="40" alt="">
-                <img src="img/catalog-img/borodinski.jpg" width="358" height="578"
+                <img class="browser-img" src="img/browser.png" width="360" height="40" alt="">
+                <img src="img/catalog-img/borodinski.jpg" width="360" height="580"
                   alt="Шаблон сайта салона красоты Barbershop «BORODINSKI»">
               </a>
               <!--Окно с ссылкой на покупку товара-->
-              <!-- <div class="product-content">
-                  <h3 class="product-title">Barbershop</h3>
-                  <p class="product-text">Cайт салона красоты.<br>Для мужчин, да.</p>
-                  <a class="button product-button" href="#">9 900 ₽</a>
-                </div> -->
+              <div class="product-content">
+                <h3 class="product-title">Barbershop</h3>
+                <p class="product-text">Cайт салона красоты.<br>Для мужчин, да.</p>
+                <a class="button product-button" href="#">9 900 ₽</a>
+              </div>
             </li>
 
             <li class="product-item">
               <a class="product-line" href="product.html">
-                <img class="product-line-img" src="img/browser.png" width="360" height="40" alt="">
-                <img src="img/catalog-img/mishka.jpg" width="358" height="578" alt="Шаблон интернет-магазина вязанных игрушек «MISHKA»">
+                <img class="browser-img" src="img/browser.png" width="360" height="40" alt="">
+                <img src="img/catalog-img/mishka.jpg" width="360" height="580" alt="Шаблон интернет-магазина вязанных игрушек «MISHKA»">
               </a>
               <!--Окно с ссылкой на покупку товара-->
-              <!-- <div class="product-content">
-                  <h3 class="product-title">Mishka</h3>
-                  <p class="product-text">Интернет-магазин<br>вязанных игрушек</p>
-                  <a class="button product-button" href="#">9 900 ₽</a>
-                </div> -->
+              <div class="product-content">
+                <h3 class="product-title">Mishka</h3>
+                <p class="product-text">Интернет-магазин<br>вязанных игрушек</p>
+                <a class="button product-button" href="#">9 900 ₽</a>
+              </div>
             </li>
 
             <li class="product-item">
               <a class="product-line" href="product.html">
-                <img class="product-line-img" src="img/browser.png" width="360" height="40" alt="">
-                <img src="img/catalog-img/aplus.jpg" width="358" height="578" alt="Шаблон сайта курсов повышения квалификации «A PLUS»">
+                <img class="browser-img" src="img/browser.png" width="360" height="40" alt="">
+                <img src="img/catalog-img/aplus.jpg" width="360" height="580" alt="Шаблон сайта курсов повышения квалификации «A PLUS»">
               </a>
               <!--Окно с ссылкой на покупку товара-->
-              <!-- <div class="product-content">
-                  <h3 class="product-title">A plus</h3>
-                  <p class="product-text">Лендинг курсов повышения<br>квалификации</p>
-                  <a class="button product-button" href="#">9 900 ₽</a>
-                </div> -->
+              <div class="product-content">
+                <h3 class="product-title">A plus</h3>
+                <p class="product-text">Лендинг курсов повышения<br>квалификации</p>
+                <a class="button product-button" href="#">9 900 ₽</a>
+              </div>
             </li>
 
             <li class="product-item">
               <a class=" product-line" href="product.html">
-                <img class="product-line-img" src="img/browser.png" width="360" height="40" alt="">
-                <img src="img/catalog-img/kvast.jpg" width="358" height="578" alt="Шаблон промо-сайта по продаже крафтового кваса «КВАСТ»">
+                <img class="browser-img" src="img/browser.png" width="360" height="40" alt="">
+                <img src="img/catalog-img/kvast.jpg" width="360" height="580" alt="Шаблон промо-сайта по продаже крафтового кваса «КВАСТ»">
               </a>
               <!--Окно с ссылкой на покупку товара-->
-              <!-- <div class="product-content">
-                  <h3 class="product-title">Кваст</h3>
-                  <p class="product-text">Промо-сайт производителя<br>крафтового кваса</p>
-                  <a class="button product-button" href="#">9 900 ₽</a>
-                </div> -->
+              <div class="product-content">
+                <h3 class="product-title">Кваст</h3>
+                <p class="product-text">Промо-сайт производителя<br>крафтового кваса</p>
+                <a class="button product-button" href="#">9 900 ₽</a>
+              </div>
             </li>
           </ul>
 
           <!-- Переключатели карточек товаров -->
           <ul class="pagination-list">
             <li class="pagination-item">
-              <a class="pagination-link">1</a>
+              <a class="pagination-link" href="#">1</a>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">2</a>
@@ -246,27 +252,29 @@
   <footer class="main-footer">
     <section class="footer-information">
       <div class="center">
-        <h2 class="visibility-hidden">Как нас найти</h2>
-        <img class="footer-map-marker" src="img/map-marker.png" width="231" height="190" alt="Маркер карты">
+        <div class="footer-information-container">
+          <h2 class="visually-hidden">Как нас найти</h2>
+          <img class="footer-map-marker" src="img/map-marker.png" width="231" height="190" alt="Маркер карты">
 
-        <div class="footer-contact">
-          <p class="footer-title">Nёrds design studio</p>
-          <p class="footer-text">191186, Санкт-Петербург,<br>
-            ул. Б. Конюшенная, д. 19/8<br></p>
-          <p class="footer-text"><a class="footer-phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a></p>
-          <p><a class="button footer-button" href="/">Напишите нам</a></p>
+          <div class="footer-contact">
+            <p class="footer-title">Nёrds design studio</p>
+            <p class="footer-text">191186, Санкт-Петербург,<br>
+              ул. Б. Конюшенная, д. 19/8<br></p>
+            <p class="footer-text"><a class="footer-phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a></p>
+            <p><a class="button footer-button" href="/">Напишите нам</a></p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="footer-social-information">
-      <h2 class="visibility-hidden">Давайте дружить!</h2>
+      <h2 class="visually-hidden">Давайте дружить!</h2>
       <div class="center">
         <div class="footer-container">
           <ul class="footer-social-list">
-            <li class="social-link">
-              <a href="#">
-                <span class="visibility-hidden">Вконтакте</span>
+            <li>
+              <a class="social-link" href="#">
+                <span class="visually-hidden">Вконтакте</span>
                 <svg class="social-link-img" width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M16.1 11.5c1-.3 2.2 2 3.5 3 1 .6 1.7.5 1.7.5h3.5s1.8-.2 1-1.6c0-.1-.5-1-2.6-3-2.2-2-1.9-1.8.7-5.3 1.6-2.1 2.3-3.5 2-4-.1-.6-1.3-.4-1.3-.4h-4c-.3 0-.6.1-.8.5 0 0-.6 1.7-1.4 3.1-1.7 3-2.4 3.2-2.7 3-.7-.5-.5-1.8-.5-2.7 0-2.9.4-4.1-.9-4.4-.4-.1-.7-.2-1.8-.2-1.4 0-2.6 0-3.2.3-.5.3-.8.7-.6.8.2 0 .8.1 1.1.6.4.5.4 1.7.4 1.7s.3 3.5-.5 3.9c-.5.3-1.3-.3-2.8-3-.8-1.4-1.4-3-1.4-3L5.2 1 4.6.7H.8S.3.7.1.9c-.2.3 0 .7 0 .7S3 8.5 6.3 12c3 3.1 6.4 3 6.4 3h1.6s.4-.1.7-.4c.2-.2.2-.7.2-.7s0-2 1-2.4z"
@@ -274,17 +282,17 @@
                 </svg>
               </a>
             </li>
-            <li class="social-link">
-              <a href="#">
-                <span class="visibility-hidden">Фейсбук</span>
+            <li>
+              <a class="social-link" href="#">
+                <span class="visually-hidden">Фейсбук</span>
                 <svg class="social-link-img" width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff" />
                 </svg>
               </a>
             </li>
-            <li class="social-link">
-              <a href="#">
-                <span class="visibility-hidden">Инстаграм</span>
+            <li>
+              <a class="social-link" href="#">
+                <span class="visually-hidden">Инстаграм</span>
                 <svg class="social-link-img" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M3 0h15a3 3 0 013 3v15a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM3 18V9h1.2a6.5 6.5 0 1012.6 0H18v9H3zM14 7h4V3h-4v4z"
@@ -301,6 +309,7 @@
       </div>
     </section>
   </footer>
+  <!--Footer end-->
 
   <!--Popup-->
   <section class="popup">
@@ -330,21 +339,9 @@
         </div>
       </form>
 
-      <!-- <button class="button-popup-close" type="button">
-          <span class="visibility-hidden">Закрыть</span>
-          <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0)">
-              <path
-                d="M13.3 10.5l7.4-7.4c.4-.4.4-1 0-1.4L19.3.3a1 1 0 00-1.4 0l-7.4 7.4L3.1.3a1 1 0 00-1.4 0L.3 1.7a1 1 0 000 1.4l7.4 7.4L.3 18a1 1 0 000 1.4l1.4 1.4c.4.4 1 .4 1.4 0l7.4-7.4 7.4 7.4c.4.4 1 .4 1.4 0l1.4-1.4c.4-.4.4-1 0-1.4l-7.4-7.4z"
-                fill="#FB565A" fill-opacity=".3" />
-            </g>
-            <defs>
-              <clipPath id="clip0">
-                <path fill="#fff" d="M0 0h21v21H0z" />
-              </clipPath>
-            </defs>
-          </svg>
-        </button> -->
+      <button class="button-popup-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </div>
   </section>
 </body>
