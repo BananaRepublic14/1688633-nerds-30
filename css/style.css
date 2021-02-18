@@ -56,20 +56,12 @@
 
 /* Global */
 
+*, *::before, *::after { box-sizing: inherit; }
+
 .page {
   box-sizing: border-box;
   height: 100%;
 }
-
-*, *::before, *::after { box-sizing: inherit; }
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
-input[type="number"] {-moz-appearance: textfield;}
-input[type="number"]:hover,
-input[type="number"]:focus {-moz-appearance: number-input;}
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none; margin: 0;}
 
 .page-body {
   min-width: 1160px;
@@ -213,13 +205,11 @@ img {
 
 .main-header-logo:hover, .main-header-logo:focus {
   opacity: 0.7; 
-  outline: none; 
 } 
 
 .main-navigation-link a:visited, .main-navigation-link a:focus,
 .user-navigation-link a:visited, .user-navigation-link a:focus {
   border-bottom: 2px solid var(--basic-red);
-  outline: none; 
   padding: 0 0 12px 0;
 }
 
@@ -334,8 +324,8 @@ img {
   align-items: center;
   width: 88px;
   position: absolute;
-  top: 317px;
-  left: 676px;
+  bottom: 90px;
+  left: 47%;
   z-index: 20;
 }
 
@@ -592,8 +582,6 @@ img {
   background: url(/img/map.jpg);
   background-size: cover;
   background-color: var(--basic-gray);
-  margin-bottom: 68px;
- 
 }
 
 .footer-information-container {
@@ -644,6 +632,10 @@ img {
 
 
 /* social section */
+
+.footer-social-information {
+  padding: 68px 0;
+}
 
 .footer-container {
   display: flex;
@@ -708,7 +700,6 @@ img {
   width: 960px;
   margin: 0 auto;
   border: 2px solid var(--basic-extra-gray-1);
-  margin-top: 40px; /* Временный отступ */
   position: relative;
 }
 
@@ -725,14 +716,12 @@ img {
   cursor: pointer;
 }
 
-.button-popup-close[type="button"]:hover, .button-popup-close[type="button"]:focus {
+.button-popup-close:hover, .button-popup-close:focus {
   opacity: 1;
-  outline: none;
 }
 
-.button-popup-close[type="button"]:active {
+.button-popup-close:active {
   opacity: 0.1;
-  outline: none;
 }
 
 .popup-container {
@@ -793,7 +782,6 @@ img {
   width: 260px;
   color: var(--basic-white);
   background-color: var(--basic-red);
-  outline: none;
 }
 
 .popup-button-send:hover,
@@ -1050,29 +1038,30 @@ img {
 
 .sorting-controls {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 30px;
 }
 
 /* Кнопки выпали из контейнера, в связи с чем-не пойму =( */
 .button-down {
   content: "";
-  position: absolute;
   right: 5px;
   width: 11px;
   height: 10px;
   background: url(../img/svg-img/icon-down.svg) 0 0 no-repeat;
   border: none;
-  outline: none;
   cursor: pointer;
 }
 
 .button-up {
   content: "";
-  position: absolute;
   width: 11px;
   height: 10px;
   background: url(../img/svg-img/icon-down.svg) 0 0 no-repeat;
   border: none;
-  outline: none;
   transform: rotate(180deg);
   cursor: pointer;
 }
@@ -1093,44 +1082,61 @@ img {
 }
 
 .product-item {
+  display: flex;
+  flex-direction: column;
   width: 360px;
-  margin: 40px 0 0 0;
   position: relative;
+  overflow:hidden;
+  border-radius: 5px;
 }
 
-.browser-img {
+.product-item::before {
+  content: "";
+  width: 100%;
+  height: 40px;
   position: absolute;
-  top:-40px;
+  background: url(../img/browser.png) 0 0 no-repeat;
   opacity: 0.1;
   margin: 0;
   padding: 0;
 }
 
-.product-content:hover,
-.browser-img:hover, .browser-img:active {
-  opacity: 1;
-  transition:
-    opacity 0.3s ease-in-out;
+.product-item-img {
+  display: block;
+  margin: 40px 0 0 0;
 }
 
+.product-item:hover .product-content {
+  transform: translateY(0%);
+  transition: 0.3s ease-in-out;
+}
+
+.product-item:hover::before {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
 
 /* Окно с ссылкой на покупку товар */
 .product-content {
-  width: 360px;
+  width: 100%;
   height: 230px;
   color: var(--basic-dark);
   background-color: var(--basic-gray);
   text-align: center;
   position: absolute;
-  top: 352px;
-  opacity: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  transform: translateY(100%);
 } 
 
 .product-title {
+  display: block;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
+  color: inherit;
   margin: 0;
   padding: 26px 0 12px 0;
 }
