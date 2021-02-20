@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <title>Магазин готовых шаблонов «Нёрдс»</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon/favicon-180.png">
@@ -155,7 +155,7 @@
               <div class="product-content">
                 <a class="product-title" href="product.html">Sedona</a>
                 <p class="product-text">Информационный сайт<br>для туристов</p>
-                <a class="button product-button" href="#">9 900 ₽</a>
+                <a class="button product-button" href="#">9<span>&ensp;</span>900<span>&ensp;&#8381;</span></a>
               </div>
             </li>
 
@@ -309,11 +309,11 @@
 
           <div class="popup-name-item">
             <label class="popup-form-label" for="name-id">Ваше имя:</label><br>
-            <input class="popup-form-field" type="text" name="name" id="name-id" placeholder="Имя Фамилия">
+            <input class="popup-form-field" type="text" name="name" id="name-id" placeholder="Имя Фамилия" required>
           </div>
           <div class="popup-email-item">
             <label class="popup-form-label" for="email-id">Ваш email:</label><br>
-            <input class="popup-form-field" type="email" name="email" id="email-id" placeholder="email@example.com">
+            <input class="popup-form-field" type="email" name="email" id="email-id" placeholder="email@example.com" required>
           </div>
 
           <div class="popup-textarea-item">

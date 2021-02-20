@@ -157,7 +157,7 @@ img {
   font-weight: 500;
   text-transform: uppercase; 
   display: grid;
-  grid-template-columns: 160px 1fr auto;
+  grid-template-columns: 160px 1fr 115px;
   gap: 20px;
   padding: 49px 0 0 0;
 }
@@ -286,9 +286,8 @@ img {
 }
 
 .slider-link {
-  background-color: var(--basic-red);
   width: 240px;
-  margin: 0 0 80px 0;
+  background-color: var(--basic-red);
 }
 
 .slider-img {
@@ -296,6 +295,8 @@ img {
   height: 431px;
   grid-column: 2/4;
   grid-row: 1/2;
+  object-fit: contain;
+  background-color: var(--basic-gray);
 }
 
 .slider-link:hover {
@@ -326,7 +327,7 @@ img {
   position: absolute;
   bottom: 90px;
   left: 47%;
-  z-index: 20;
+  z-index: 2;
 }
 
 .slider-controls .slider-button {
@@ -363,8 +364,12 @@ img {
 }
 
 .services-img {
+  width: 300px;
+  height: 146px;
   margin: 0 0 25px 0;
   padding: 0;
+  object-fit: contain;
+  background-color: var(--basic-white);
 }
 
 .services-title {
@@ -385,6 +390,7 @@ img {
 }
 
 .services-button-red {
+  width: 160px;
   background-color: var(--basic-red);
 }
 
@@ -398,6 +404,7 @@ img {
 }
 
 .services-button-green {
+  width: 160px;
   background-color: var(--basic-green);
 }
 
@@ -411,6 +418,7 @@ img {
 }
 
 .services-button-yellow {
+  width: 160px;
   background-color: var(--basic-gold);
 }
 
@@ -439,8 +447,13 @@ img {
   column-gap: 149px;
 }
 
-.information-column-left {
+.information-column-left:first-child {
+  margin: 34px 0 0 0;
   color: var(--basic-extra-dark-3);
+}
+
+.information-column-right:first-child {
+  margin: 0;
 }
 
 .information-title {
@@ -448,7 +461,7 @@ img {
   font-size: 45px;
   line-height: 45px;
   color: var(--basic-dark);
-  margin: 34px 0 32px 0;
+  margin: 0 0 32px 0;
 }
 
 .information-text {
@@ -489,6 +502,8 @@ img {
 }
 
 .information-img {
+  width: 360px;
+  height: 208px;
   margin: 0 0 37px 0;
   padding: 0;
 }
@@ -509,6 +524,7 @@ img {
 }
 
 .information-table-lead td {
+  word-break: break-all;
   padding: 0 22px 10px 0;
 }
 
@@ -578,20 +594,20 @@ img {
 /* footer */
 
 .footer-information {
-  min-height: 416px;
-  background: url(/img/map.jpg);
-  background-size: cover;
   background-color: var(--basic-gray);
 }
 
 .footer-information-container {
-   position: relative;
+  width: 1440px;
+  height: 416px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .footer-map-marker {
   position: absolute;
-  top: 86px;
-  left: 682px;
+  top: 20px;
+  left: 670px;
 }
  
 .footer-contact {
@@ -696,11 +712,22 @@ img {
 
 /* Popup */
 
+.popup-container {
+  margin: 0; 
+  padding: 63px 90px 84px 100px;
+}
+
 .popup {
   width: 960px;
   margin: 0 auto;
+  background-color: var(--basic-white);
   border: 2px solid var(--basic-extra-gray-1);
-  position: relative;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 31%;
+  bottom: 180px;
+  z-index: 10;
+  display: none;
 }
 
 .button-popup-close {
@@ -722,11 +749,6 @@ img {
 
 .button-popup-close:active {
   opacity: 0.1;
-}
-
-.popup-container {
-  margin: 0; 
-  padding: 63px 90px 84px 100px;
 }
 
 .popup-description {
@@ -775,7 +797,7 @@ img {
   min-width: 360px;
   height: 50px;
   border: 2px solid var(--basic-extra-gray-1);
-  padding: 0 10px;
+  padding: 10px;
 }
 
 .popup-button-send {
@@ -1028,11 +1050,15 @@ img {
   opacity: 0.3;
 }
 
-.sorting-text a:hover {
-  opacity: 0.6;
+.sorting-text a:visited, .sorting-text a:focus {
+  opacity: 1;
 }
 
-.sorting-text a:visited, .sorting-text a:active, .sorting-text a:focus {
+.sorting-text a:hover {
+  opacity: 0.6;
+} 
+
+.sorting-text a:active {
   opacity: 1;
 }
 
@@ -1175,29 +1201,31 @@ img {
 
 /* Переключатели карточек товаров */
 .pagination-list {
-  list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .pagination-item {
-  margin: 0 11px 0 0; 
+  margin: 10px; 
   color: var(--basic-dark);
   background-color: var(--basic-gray);
 }
 
 .pagination-link {
-  color: inherit;
-  width: 50px;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 50px;
+  height: 50px;
   font-weight: 500;
+  color: inherit;
   border-radius: 3px;
+  padding: 10px;
 }
 
 .pagination-link:focus,
