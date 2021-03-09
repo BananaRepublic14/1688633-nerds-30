@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <title>Интернет магазин «Нёрдс»</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon/favicon-180.png">
@@ -45,7 +45,7 @@
       <div class="center">
         <!--Первый слайд-->
         <ul class="slider-list">
-          <li class="slider-item slide slide-current">
+          <li class="slider-item slide-current">
             <div class="slider-wrapper">
               <div class="slider-inner">
                 <p class="slider-title">Долго, дорого, скрупулезно. </p>
@@ -59,7 +59,7 @@
           </li>
 
           <!-- Второй слайд-->
-          <li class="slider-item slide">
+          <li class="slider-item">
             <div class="center">
               <div class="slider-wrapper">
                 <div class="slider-inner">
@@ -75,7 +75,7 @@
           </li>
 
           <!--Третий слайд-->
-          <li class="slider-item slide">
+          <li class="slider-item">
             <div class="center">
               <div class="slider-wrapper">
                 <div class="slider-inner">
@@ -209,7 +209,7 @@
             <p class="footer-text">191186, Санкт-Петербург,<br>
               ул. Б. Конюшенная, д. 19/8<br></p>
             <p class="footer-text"><a class="footer-phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a></p>
-            <p><a class="button footer-button" href="/">Напишите нам</a></p>
+            <p><a class="button footer-button" href="blank.html" target="_blank">Напишите нам</a></p>
           </div>
         </div>
       </div>
@@ -289,14 +289,12 @@
         </div>
       </form>
 
-      <button class="button-popup-close" type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
+      <button class="button-popup-close" type="button" aria-label="Закрыть"></button>
 
     </div>
   </section>
 
-  <script src="js/popup.js"></script>
+  <script src="js/popup.min.js"></script>
 </body>
 
 </html>

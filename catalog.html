@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <title>Магазин готовых шаблонов «Нёрдс»</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon/favicon-180.png">
@@ -55,16 +55,10 @@
               <div class="range-filter">
                 <div class="range-controls">
                   <div class="scale">
-                    <div class="bar" style="
-                        width: 65%;
-                      "></div>
+                    <div class="bar" style="width: 65%;"></div>
                   </div>
-                  <div class="toggle toggle-min" aria-label="Уменьшить цену" tabindex="0" style="
-                      left: 7%
-                    "></div>
-                  <div class="toggle toggle-max" aria-label="Увеличить цену" tabindex="0" style="
-                      left: 62%
-                    "></div>
+                  <div class="toggle toggle-min" aria-label="Уменьшить цену" tabindex="0" style="left: 7%;"></div>
+                  <div class="toggle toggle-max" aria-label="Увеличить цену" tabindex="0" style="left: 62%;"></div>
                 </div>
               </div>
 
@@ -142,8 +136,8 @@
             </ul>
 
             <div class="sorting-controls">
-              <button class="button-down"><span class="visually-hidden">Вниз</span></button>
-              <button class="button-up checked"><span class="visually-hidden">Вверх</span></button>
+              <button class="button-down" aria-label="Вниз"></button>
+              <button class="button-up checked" aria-label="Вверх"></button>
             </div>
 
           </div>
@@ -258,7 +252,7 @@
             <p class="footer-text">191186, Санкт-Петербург,<br>
               ул. Б. Конюшенная, д. 19/8<br></p>
             <p class="footer-text"><a class="footer-phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a></p>
-            <p><a class="button footer-button" href="/">Напишите нам</a></p>
+            <p><a class="button footer-button" href="blank.html" target="_blank">Напишите нам</a></p>
           </div>
         </div>
       </div>
@@ -270,8 +264,7 @@
         <div class="footer-container">
           <ul class="footer-social-list">
             <li>
-              <a class="social-link" href="https://vk.com/" target="_blank">
-                <span class="visually-hidden">Вконтакте</span>
+              <a class="social-link" href="https://vk.com/" target="_blank" aria-label="Вконтакте">
                 <svg class="social-link-img" aria-hidden="true" focusable="false" width="27" height="15" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -281,8 +274,7 @@
               </a>
             </li>
             <li>
-              <a class="social-link" href="https://www.facebook.com/" target="_blank">
-                <span class="visually-hidden">Фейсбук</span>
+              <a class="social-link" href="https://www.facebook.com/" target="_blank" aria-label="Фейсбук">
                 <svg class="social-link-img" aria-hidden="true" focusable="false" width="12" height="22" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff" />
@@ -290,8 +282,7 @@
               </a>
             </li>
             <li>
-              <a class="social-link" href="https://www.instagram.com/?hl=ru" target="_blank">
-                <span class="visually-hidden">Инстаграм</span>
+              <a class="social-link" href="https://www.instagram.com/?hl=ru" target="_blank" aria-label="Инстаграм">
                 <svg class="social-link-img" aria-hidden="true" focusable="false" width="21" height="21" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -339,13 +330,12 @@
         </div>
       </form>
 
-      <button class="button-popup-close" type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
+      <button class="button-popup-close" type="button" aria-label="Закрыть"></button>
+
     </div>
   </section>
 
-  <script src="js/popup.js"></script>
+  <script src="js/popup.min.js"></script>
 </body>
 
 </html>

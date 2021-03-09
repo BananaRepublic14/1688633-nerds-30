@@ -122,7 +122,6 @@ a { text-decoration: none; }
   cursor: pointer;
 }
 
-
 /* text-uppercase */
 
 .text-uppercase {
@@ -144,7 +143,6 @@ a { text-decoration: none; }
 .wrapper {
   background-color: var(--basic-gray);
 }
-
 
 /* Раздел "Main navigation" */
 
@@ -206,7 +204,10 @@ a { text-decoration: none; }
   padding: 0 0 12px 0;
 }
 
-.main-header-logo:hover,
+.main-header-logo:hover {
+  opacity: 0.7;
+}
+
 .main-navigation-link a:hover,
 .user-navigation-link a:hover {
   color: var(--basic-red);
@@ -220,7 +221,6 @@ a { text-decoration: none; }
   border: none;
 }
 
-
 /* Иконки */
 
 .basket::before {
@@ -228,10 +228,10 @@ a { text-decoration: none; }
   width: 15px;
   height: 15px;
   display: inline-block;
+  vertical-align: baseline;
   background: url("../img/svg-img/basket-icon.svg") 0 0 no-repeat;
   margin: 0 25px 0 0;
 }
-
 
 /* Раздел "Presentation" */
 
@@ -245,10 +245,6 @@ a { text-decoration: none; }
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.slider-item {
-  display: none;
 }
 
 .slider-wrapper {
@@ -303,7 +299,7 @@ a { text-decoration: none; }
 }
 
 /* Управление слайдами */
-.slide {
+.slider-item {
   display: none;
   background-color: inherit;
 }
@@ -426,7 +422,6 @@ a { text-decoration: none; }
   color: rgba(255,255, 255, 0.3); 
 }
 
-
 /* Раздел "Information" */
 
 .information {
@@ -485,6 +480,7 @@ a { text-decoration: none; }
   width: 25px;
   height: 2px;
   display: inline-block;
+  vertical-align: baseline;
   background-color: var(--basic-red);
   margin: 0 11px 4px 0;
 }
@@ -534,7 +530,6 @@ a { text-decoration: none; }
   font-size: 16px;
   line-height: 18px;
 }
-
 
 /* Раздел "Partner" */
 
@@ -592,7 +587,6 @@ a { text-decoration: none; }
 .partner-link:active {
   opacity: 0.1;
 }
-
 
 /* footer */
 
@@ -658,8 +652,7 @@ iframe {
   color: rgba(255,255, 255, 0.3); 
 }
 
-
-/* social section */
+/* Social section */
 
 .footer-social-information {
   padding: 68px 0;
@@ -720,7 +713,6 @@ iframe {
   color: var(--basic-extra-dark-1);
   margin: 0 0 10px 0;
 }
-
 
 /* Popup */
 
@@ -789,7 +781,8 @@ iframe {
 .popup-form-item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px; /* Обратить внимание, внизу отступ 34px */
+  column-gap: 40px;
+  grid-row-gap: 34px;
 }
 
 .popup-name-item {
@@ -852,6 +845,7 @@ input:invalid:not(:placeholder-shown) {
   border: 2px solid var(--basic-red);
 }
 
+
 /* Магазин готовых шаблонов - catalog.html */
 
 .main-catalog {
@@ -872,7 +866,6 @@ input:invalid:not(:placeholder-shown) {
   grid-template-columns: 260px 760px;
   column-gap: 140px;
 }
-
 
 /* Раздел "Фильтр товаров" */
 
@@ -1062,7 +1055,6 @@ input:invalid:not(:placeholder-shown) {
   color: rgba(0, 0, 0, 0.3); 
 }
 
-
 /* Раздел "Каталог" */
 
 .sorting-container {
@@ -1120,7 +1112,6 @@ input:invalid:not(:placeholder-shown) {
   min-width: 40px;
 }
 
-/* Кнопки выпали из контейнера, в связи с чем-не пойму =( */
 .button-down {
   content: "";
   right: 5px;
