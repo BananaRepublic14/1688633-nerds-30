@@ -43,6 +43,8 @@ document.addEventListener('keydown', function (evt) {
 form.addEventListener('submit', function (evt) {
   if (!popupName.value || !popupEmail.value || !popupText.value) {
     evt.preventDefault();
+    popup.classList.remove('popup-error');
+    popup.offsetWidth = popup.offsetWidth;
     popup.classList.add('popup-error');
     // alert('Пожалуйста, заполните все поля!');
   } else {

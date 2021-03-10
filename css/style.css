@@ -27,13 +27,6 @@
   font-display: swap;
 }
 
-/* Анимация */
-
-@keyframes shake {
-  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
-  20%, 40%, 60%, 80% {transform: translateX(-10px);}
-}
-
 /* Variables */
 
 :root {
@@ -591,7 +584,8 @@ a { text-decoration: none; }
 /* footer */
 
 .footer-information {
-  background-color: var(--basic-gray);
+  background: var(--basic-gray) url(/img/map.jpg) no-repeat 50% 50% / auto 100%;
+  /* Подложка в случии не отработки iframe */
 }
 
 .footer-information-container {
@@ -600,18 +594,12 @@ a { text-decoration: none; }
   margin: 77px 0 0 0;
 }
 
-iframe {
+.iframe-map {
   width: 100%;
   max-width: 100%;
   height: 416px;
 } 
 
-.footer-map-marker {
-  position: absolute;
-  top: 20px;
-  left: 48%;
-}
- 
 .footer-contact {
   width: 320px;
   color: var(--basic-dark);
@@ -718,19 +706,21 @@ iframe {
 
 .popup {
   width: 960px;
-  margin: 0 auto;
+  margin: auto;
   background-color: var(--basic-white);
   border: 2px solid var(--basic-extra-gray-1);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
   position: fixed;
-  left: 31%;
-  bottom: 180px;
+  left: 0;
+  right: 0;
+  bottom: 50px;
   z-index: 10;
   display: none;
 }
 
 .popup-show {
   display: block;
+  animation: bounce 0.6s;
 }
 
 .popup-error {
@@ -1299,4 +1289,20 @@ input:invalid:not(:placeholder-shown) {
 .pagination-link-next:active {
   background-color: var(--basic-extra-gray-4);
   color: rgba(0, 0, 0, 0.3); 
+}
+
+
+/* Анимация */
+
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+@keyframes bounce {
+  0% {transform: translateY(-2000px);}
+  70% {transform: translateY(30px);}
+  90% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
 }
