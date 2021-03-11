@@ -216,12 +216,15 @@ a { text-decoration: none; }
 
 /* Иконки */
 
+.basket {
+  display: inline-flex;
+  align-items: center;
+}
+
 .basket::before {
   content: "";
   width: 15px;
   height: 15px;
-  display: inline-block;
-  vertical-align: baseline;
   background: url("../img/svg-img/basket-icon.svg") 0 0 no-repeat;
   margin: 0 25px 0 0;
 }
@@ -461,6 +464,8 @@ a { text-decoration: none; }
 }
 
 .information-text-list li {
+  display: flex;
+  align-items: center;
   margin: 0 0 25px 0;
 }
 
@@ -472,8 +477,6 @@ a { text-decoration: none; }
   content: "";
   width: 25px;
   height: 2px;
-  display: inline-block;
-  vertical-align: baseline;
   background-color: var(--basic-red);
   margin: 0 11px 4px 0;
 }
